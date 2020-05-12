@@ -16,12 +16,30 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  text-decoration: none;
 }
 
 .navbar {
-  min-height: 10vh;
+  min-height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
 }
 
 .navbar nav {
@@ -35,14 +53,20 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-bewteen;
-      -ms-flex-pack: space-bewteen;
-          justify-content: space-bewteen;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   margin: auto;
   width: 90%;
 }
 
-.navbar nav ul {
+.navbar nav h3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+}
+
+.navbar nav .links-n-shit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,12 +77,31 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
 }
 
-.navbar nav .icons {
+.navbar nav .links-n-shit ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+.navbar nav .links-n-shit .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,17 +115,58 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 5vw;
+  width: 6vmin;
 }
 
-.navbar nav .icons .profile-image {
-  height: auto;
-  width: 25%;
+.navbar nav .links-n-shit .icons .profile-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  width: calc(0.4rem + 1.2vmin);
 }
 
-.navbar nav .icons .profile-image img {
+.navbar nav .links-n-shit .icons .profile-image img {
   border-radius: 50%;
   height: 100%;
   width: 100%;
+}
+
+.navbar nav .links-n-shit .icons .bell-icon {
+  width: calc(0.4rem + 1.2vmin);
+}
+
+.navbar nav .links-n-shit .icons .bell-icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar nav .links-n-shit .icons .bell-icon svg g {
+  fill: #f4d2d3;
+}
+
+.navbar nav .links-n-shit .icons svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
 }
 /*# sourceMappingURL=style.css.map */

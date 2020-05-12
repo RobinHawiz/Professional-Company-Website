@@ -1,22 +1,54 @@
 .navbar {
-  min-height: 10vh;
+  min-height: 8vh;
+
+  @include flex(row, center, none);
   nav {
-    @include flex(row, center, space-bewteen);
+    @include flex(row, center, none);
     margin: auto;
     width: 90%;
-    ul {
-      @include flex(row, center, center);
+
+    h3 {
+      flex: 1 1 20rem;
     }
-    .icons {
-      @include flex(row, center, space-between);
-      width: 5vw;
-      .profile-image {
-        height: auto;
-        width: 25%;
-        img {
-          border-radius: 50%;
-          height: 100%;
-          width: 100%;
+
+    .links-n-shit {
+      @include flex(row, center, flex-end);
+      flex: 1 1 20rem;
+
+      ul {
+        @include flex(row, center, none);
+      }
+
+      .icons {
+        @include flex(row, center, space-between);
+        width: 6vmin;
+
+        .profile-image {
+          @include flex(row, center, none);
+          width: calc(0.4rem + 1.2vmin);
+
+          img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .bell-icon {
+          width: calc(0.4rem + 1.2vmin);
+
+          svg {
+            height: 100%;
+            width: 100%;
+
+            g {
+              fill: rgb(244, 210, 211);
+            }
+          }
+        }
+
+        svg {
+          @include flex(row, center, none);
         }
       }
     }

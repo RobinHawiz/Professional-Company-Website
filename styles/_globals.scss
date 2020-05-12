@@ -8,6 +8,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  text-decoration: none;
 }
