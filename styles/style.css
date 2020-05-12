@@ -19,4 +19,70 @@ body {
 a {
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
 }
+
+.navbar {
+  min-height: 10vh;
+}
+
+.navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-bewteen;
+      -ms-flex-pack: space-bewteen;
+          justify-content: space-bewteen;
+  margin: auto;
+  width: 90%;
+}
+
+.navbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar nav .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 5vw;
+}
+
+.navbar nav .icons .profile-image {
+  height: auto;
+  width: 25%;
+}
+
+.navbar nav .icons .profile-image img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

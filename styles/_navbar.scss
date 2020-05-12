@@ -1,0 +1,24 @@
+.navbar {
+  min-height: 10vh;
+  nav {
+    @include flex(row, center, space-bewteen);
+    margin: auto;
+    width: 90%;
+    ul {
+      @include flex(row, center, center);
+    }
+    .icons {
+      @include flex(row, center, space-between);
+      width: 5vw;
+      .profile-image {
+        height: auto;
+        width: 25%;
+        img {
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
