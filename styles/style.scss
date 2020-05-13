@@ -43,4 +43,22 @@ $theme-color2: #f4d2d3;
       }
     }
   }
+
+  /* ABOUT SECTION */
+
+  #about {
+    .info {
+      justify-content: center;
+      .info-box {
+        width: 60vw;
+        h1 {
+          font-size: calc(1rem + 8vmin);
+        }
+        p {
+          font-size: calc(1rem + 2vmin);
+          padding: 1.5rem 0rem;
+        }
+      }
+    }
+  }
 }

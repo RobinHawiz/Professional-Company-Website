@@ -301,5 +301,21 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  /* ABOUT SECTION */
+  #about .info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #about .info .info-box {
+    width: 60vw;
+  }
+  #about .info .info-box h1 {
+    font-size: calc(1rem + 8vmin);
+  }
+  #about .info .info-box p {
+    font-size: calc(1rem + 2vmin);
+    padding: 1.5rem 0rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
