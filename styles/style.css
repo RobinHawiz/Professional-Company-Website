@@ -315,7 +315,14 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 10rem;
           flex: 1 1 10rem;
-  padding: 0rem 0.5rem;
+  margin: 0rem 0.5rem;
+  position: relative;
+}
+
+#about .projects .project:hover .hover-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #about .projects .project img {
@@ -323,6 +330,49 @@ a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#about .projects .project .hover-content {
+  position: absolute;
+  background: rgba(18, 19, 156, 0.4);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 2.3rem;
+  display: none;
+}
+
+#about .projects .project .hover-content .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about .projects .project .hover-content .text p {
+  color: white;
+}
+
+#about .projects .project .hover-content .text p.title {
+  font-size: calc(1rem + 0.7vmin);
+  text-align: center;
+  font-weight: 200;
+}
+
+#about .projects .project .hover-content .text p.content {
+  padding-top: 1rem;
+  font-size: calc(0.4rem + 0.7vmin);
+  line-height: 2.5;
+  text-align: center;
 }
 
 @media screen and (max-width: 688px) {
