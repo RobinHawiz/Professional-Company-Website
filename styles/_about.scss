@@ -27,4 +27,20 @@
       }
     }
   }
+  .projects {
+    background: white;
+    min-height: 42vh;
+    height: 42vh;
+    @include flex(row, center, space-between);
+
+    .project {
+      height: 100%;
+      width: 10.7vw;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
