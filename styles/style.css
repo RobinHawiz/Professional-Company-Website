@@ -133,6 +133,7 @@ a {
       -ms-flex-pack: none;
           justify-content: none;
   width: calc(0.4rem + 1.2vmin);
+  margin-right: 0.3rem;
 }
 
 .navbar nav .links-n-shit .icons .profile-image img {

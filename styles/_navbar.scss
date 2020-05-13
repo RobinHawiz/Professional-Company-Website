@@ -26,7 +26,7 @@
         .profile-image {
           @include flex(row, center, none);
           width: calc(0.4rem + 1.2vmin);
-
+          margin-right: 0.3rem;
           img {
             border-radius: 50%;
             height: 100%;
@@ -45,6 +45,9 @@
               fill: rgb(244, 210, 211);
             }
           }
+        }
+
+        .down-arrow-icon {
         }
 
         svg {
