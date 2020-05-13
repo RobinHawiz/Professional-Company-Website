@@ -5,28 +5,44 @@
   nav {
     @include flex(row, center, none);
     margin: auto;
-    width: 90%;
+    width: 92%;
+    flex-wrap: wrap;
 
-    h3 {
-      flex: 1 1 20rem;
+    .logo {
+      font-size: $nav-logo-font-size;
+      color: $theme-color1;
+      font-weight: 600;
+      padding: 2vmin 0rem;
     }
 
     .links-n-shit {
       @include flex(row, center, flex-end);
-      flex: 1 1 20rem;
+      margin-right: 1rem;
+      padding: 2vmin 0rem;
+      flex: 1 1 45rem;
 
       ul {
-        @include flex(row, center, none);
+        @include flex(row, none, none);
+        li {
+          padding: 0rem 1rem;
+          a {
+            font-size: $nav-a-font-size;
+            color: $theme-color1;
+            font-family: $font-proxima;
+          }
+        }
       }
 
       .icons {
-        @include flex(row, center, space-between);
-        width: 6vmin;
+        @include flex(row, none, none);
+        width: 7vmin;
+        padding-left: 1rem;
 
         .profile-image {
           @include flex(row, center, none);
-          width: calc(0.4rem + 1.2vmin);
-          margin-right: 0.3rem;
+          width: 2.5rem;
+          min-width: 2.5rem;
+          margin: 0rem 1rem;
           img {
             border-radius: 50%;
             height: 100%;
@@ -35,7 +51,8 @@
         }
 
         .bell-icon {
-          width: calc(0.4rem + 1.2vmin);
+          min-width: 2.5rem;
+          width: 2.5rem;
 
           svg {
             height: 100%;
@@ -48,6 +65,7 @@
         }
 
         .down-arrow-icon {
+          align-self: center;
         }
 
         svg {

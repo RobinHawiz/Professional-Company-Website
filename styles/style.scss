@@ -13,6 +13,11 @@
       format("svg");
 }
 
+$nav-logo-font-size: 2.2rem;
+$nav-a-font-size: 1.4rem;
+$font-proxima: "ProximaNW01-Reg", Fallback, sans-serif;
+$theme-color1: #12139c;
+
 @mixin flex($direction, $align, $justify) {
   display: flex;
   flex-direction: $direction;
