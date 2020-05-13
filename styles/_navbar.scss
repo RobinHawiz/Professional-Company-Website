@@ -34,19 +34,24 @@
         }
       }
       .icons {
-        @include flex(row, none, none);
+        @include flex(row, center, none);
         padding: 2vmin 0rem;
         padding-left: 1rem;
 
-        .profile-image {
-          @include flex(row, center, none);
-          width: 2.5rem;
-          min-width: 2.5rem;
-          margin: 0rem 1rem;
-          img {
-            border-radius: 50%;
-            height: 100%;
-            width: 100%;
+        .link2 {
+          &:hover + .link3 .down-arrow-icon svg g {
+            fill: $theme-color2;
+          }
+          .profile-image {
+            @include flex(row, center, none);
+            width: 2.5rem;
+            min-width: 2.5rem;
+            margin: 0rem 1rem;
+            img {
+              border-radius: 50%;
+              height: 100%;
+              width: 100%;
+            }
           }
         }
 
@@ -59,13 +64,22 @@
             width: 100%;
 
             g {
-              fill: rgb(244, 210, 211);
+              fill: $theme-color2;
             }
           }
         }
 
-        .down-arrow-icon {
-          align-self: center;
+        .link3 {
+          .down-arrow-icon {
+            align-self: center;
+            cursor: pointer;
+            &:hover g {
+              fill: $theme-color2;
+            }
+            g {
+              fill: $theme-color1;
+            }
+          }
         }
 
         svg {

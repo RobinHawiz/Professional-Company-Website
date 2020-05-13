@@ -141,9 +141,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
@@ -151,7 +151,11 @@ a {
   padding-left: 1rem;
 }
 
-.navbar nav .links-n-shit .icons .profile-image {
+.navbar nav .links-n-shit .icons .link2:hover + .link3 .down-arrow-icon svg g {
+  fill: #f4d2d3;
+}
+
+.navbar nav .links-n-shit .icons .link2 .profile-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,7 +174,7 @@ a {
   margin: 0rem 1rem;
 }
 
-.navbar nav .links-n-shit .icons .profile-image img {
+.navbar nav .links-n-shit .icons .link2 .profile-image img {
   border-radius: 50%;
   height: 100%;
   width: 100%;
@@ -190,10 +194,19 @@ a {
   fill: #f4d2d3;
 }
 
-.navbar nav .links-n-shit .icons .down-arrow-icon {
+.navbar nav .links-n-shit .icons .link3 .down-arrow-icon {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  cursor: pointer;
+}
+
+.navbar nav .links-n-shit .icons .link3 .down-arrow-icon:hover g {
+  fill: #f4d2d3;
+}
+
+.navbar nav .links-n-shit .icons .link3 .down-arrow-icon g {
+  fill: #12139c;
 }
 
 .navbar nav .links-n-shit .icons svg {
