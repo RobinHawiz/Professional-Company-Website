@@ -225,6 +225,18 @@ a {
           justify-content: none;
 }
 
+#about {
+  background: url("../images-about/parallax-image.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about .info {
+  min-height: 50vh;
+}
+
 @media screen and (max-width: 688px) {
   .navbar nav {
     -webkit-box-pack: center;
