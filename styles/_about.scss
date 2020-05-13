@@ -6,5 +6,25 @@
   background-size: cover;
   .info {
     min-height: 50vh;
+    margin: auto;
+    width: 92%;
+    @include flex(row, center, none);
+    .info-box {
+      min-height: 38vh;
+      width: 45vw;
+      @include flex(column, center, center);
+      background: rgba(255, 255, 255, 0.5);
+      text-align: center;
+
+      h1 {
+        line-height: 1.3;
+      }
+      p {
+        padding: 3rem 0rem;
+        color: $theme-color1;
+        font-weight: 400;
+        font-size: 2rem;
+      }
+    }
   }
 }

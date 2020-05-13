@@ -12,6 +12,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  font-size: $header1;
+  color: $theme-color1;
+  font-weight: 700;
+}
+
 li {
   list-style: none;
 }

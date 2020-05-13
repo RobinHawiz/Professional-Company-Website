@@ -13,6 +13,7 @@
       format("svg");
 }
 
+$header1: 7.2rem;
 $nav-logo-font-size: 2.2rem;
 $nav-a-font-size: 1.4rem;
 $font-proxima: "ProximaNW01-Reg", Fallback, sans-serif;
@@ -32,6 +33,8 @@ $theme-color2: #f4d2d3;
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
 
 @media screen and (max-width: 688px) {
+  /* NAVBAR */
+
   .navbar {
     nav {
       justify-content: center;
