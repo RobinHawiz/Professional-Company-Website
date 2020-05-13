@@ -80,16 +80,15 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 2vmin 0rem;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 45rem;
-          flex: 1 1 45rem;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -108,9 +107,23 @@ a {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
+  padding: 2vmin 0rem;
 }
 
 .navbar nav .links-n-shit ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   padding: 0rem 1rem;
 }
 
@@ -134,6 +147,7 @@ a {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
+  padding: 2vmin 0rem;
   padding-left: 1rem;
 }
 
@@ -196,5 +210,18 @@ a {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
+}
+
+@media screen and (max-width: 688px) {
+  .navbar nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar nav .links-n-shit {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

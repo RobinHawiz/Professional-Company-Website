@@ -16,15 +16,15 @@
     }
 
     .links-n-shit {
-      @include flex(row, flex-end, flex-end);
-
-      padding: 2vmin 0rem;
-      flex: 1 1 45rem;
+      @include flex(row, center, flex-end);
+      flex: 1 1 50rem;
       flex-wrap: wrap;
 
       ul {
         @include flex(row, none, none);
+        padding: 2vmin 0rem;
         li {
+          @include flex(row, center, none);
           padding: 0rem 1rem;
           a {
             font-size: $nav-a-font-size;
@@ -33,9 +33,9 @@
           }
         }
       }
-
       .icons {
         @include flex(row, none, none);
+        padding: 2vmin 0rem;
         padding-left: 1rem;
 
         .profile-image {

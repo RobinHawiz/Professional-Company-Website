@@ -28,3 +28,14 @@ $theme-color1: #12139c;
 @import "globals";
 @import "navbar";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
+
+@media screen and (max-width: 688px) {
+  .navbar {
+    nav {
+      justify-content: center;
+      .links-n-shit {
+        justify-content: center;
+      }
+    }
+  }
+}
