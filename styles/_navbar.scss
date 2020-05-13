@@ -16,10 +16,11 @@
     }
 
     .links-n-shit {
-      @include flex(row, center, flex-end);
-      margin-right: 1rem;
+      @include flex(row, flex-end, flex-end);
+
       padding: 2vmin 0rem;
       flex: 1 1 45rem;
+      flex-wrap: wrap;
 
       ul {
         @include flex(row, none, none);
@@ -35,7 +36,6 @@
 
       .icons {
         @include flex(row, none, none);
-        width: 7vmin;
         padding-left: 1rem;
 
         .profile-image {
