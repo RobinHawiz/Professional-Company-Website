@@ -420,7 +420,7 @@ button {
 
 #quote .quote-content {
   min-height: 40vh;
-  margin: 8rem;
+  margin: calc(1rem + 3.5vw);
   background: #f4d2d3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,7 +450,7 @@ button {
 #quote .quote-content p.quote-name {
   padding-top: 2vmin;
   font-weight: 400;
-  font-size: calc(0.5rem + 1vmin);
+  font-size: calc(1rem + 0.5vmin);
 }
 
 @media screen and (max-width: 688px) {
