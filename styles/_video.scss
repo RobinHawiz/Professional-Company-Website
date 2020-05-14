@@ -60,6 +60,7 @@
     .mini-footer {
       width: 90%;
       margin: 0 auto;
+      @include flex(row, center, space-between);
       .searchbar {
         border-bottom: 0.1rem solid white;
         width: 18rem;
@@ -91,6 +92,23 @@
             color: white;
             font-family: $font-proxima;
             font-size: $chanel-placeholder-text-font-size;
+          }
+        }
+      }
+
+      .icons {
+        .share-icon {
+          svg {
+            fill: white;
+            height: auto;
+            width: auto;
+            @include flex(row, center, center);
+            position: relative;
+            background: black;
+            g {
+              position: absolute;
+              transform: scale(0.1);
+            }
           }
         }
       }
