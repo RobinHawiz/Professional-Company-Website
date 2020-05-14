@@ -29,16 +29,18 @@
   }
   .projects {
     background: white;
-    min-height: 42vh;
+
     height: 42vh;
+    min-height: 42vh;
     @include flex(row, center, space-between);
     flex-wrap: wrap;
 
     .project {
       height: 100%;
+      min-height: 30rem;
 
-      flex: 1 1 10rem;
-      margin: 0rem 0.5rem;
+      flex: 1 1 22rem;
+      margin: 0 0.25vmin;
       position: relative;
 
       &:hover .hover-content {
@@ -56,11 +58,11 @@
         top: 0;
         width: 100%;
         height: 100%;
-        padding: 0rem 2.3rem;
         @include flex(column, none, space-evenly);
         display: none;
         .text {
-          @include flex(column, center, center);
+          width: 75%;
+          margin: auto;
           p {
             color: white;
           }
@@ -72,7 +74,7 @@
           p.content {
             padding-top: 1rem;
             font-size: $project-p-content-font-size;
-            line-height: 2.5;
+            line-height: calc(1rem + 1vw);
             text-align: center;
           }
         }
@@ -80,10 +82,14 @@
         .buttons {
           @include flex(row, center, space-between);
           button {
-            padding: 1rem;
+            padding: calc(4rem - 2vmin) calc(3.2rem - 2vmin);
             background: transparent;
             border: none;
             outline: 0;
+            svg {
+              width: calc(1rem + 1vmin);
+              height: calc(1rem + 1vmin);
+            }
           }
         }
       }
