@@ -453,11 +453,66 @@ button {
   font-size: calc(1rem + 0.5vmin);
 }
 
-#video .video-chanel {
-  height: 60vh;
+#video .background {
   background: url("../images-video/palmtrees.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#video .video-chanel {
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#video .video-chanel .title-and-play p {
+  color: white;
+}
+
+#video .video-chanel .title-and-play p.title {
+  font-size: calc(2rem + 1vmin);
+  font-weight: 600;
+}
+
+#video .video-chanel .title-and-play button {
+  border: none;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#video .video-chanel .title-and-play button .play-button {
+  border: 0.3rem solid white;
+  border-radius: 50%;
+  padding: 2.5rem;
+}
+
+#video .video-chanel .title-and-play button p.button-text {
+  font-size: calc(1.2rem + 0.5vmin);
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
 }
 
 @media screen and (max-width: 688px) {
