@@ -453,6 +453,13 @@ button {
   font-size: calc(1rem + 0.5vmin);
 }
 
+#video .video-chanel {
+  height: 60vh;
+  background: url("../images-video/palmtrees.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media screen and (max-width: 688px) {
   /* NAVBAR */
   .navbar nav {
