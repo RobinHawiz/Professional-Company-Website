@@ -18,6 +18,8 @@ $nav-logo-font-size: 2.2rem;
 $nav-a-font-size: 1.4rem;
 $project-p-title-font-size: calc(1.2rem + 1vmin);
 $project-p-content-font-size: calc(0.7rem + 0.5vmin);
+$quote-text-p-font-size: calc(1rem + 1vmin);
+$quote-name-p-font-size: calc(0.5rem + 1vmin);
 $font-proxima: "ProximaNW01-Reg", Fallback, sans-serif;
 $theme-color1: #12139c;
 $theme-color1-opacity: rgba(18, 19, 156, 0.4);
@@ -33,6 +35,7 @@ $theme-color2: #f4d2d3;
 @import "globals";
 @import "navbar";
 @import "about";
+@import "quote";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
 
 @media screen and (max-width: 688px) {

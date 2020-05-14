@@ -1,0 +1,21 @@
+#quote {
+  .quote-content {
+    min-height: 40vh;
+    margin: 8rem;
+    background: $theme-color2;
+    @include flex(column, center, center);
+    text-align: center;
+    p {
+      color: $theme-color1;
+    }
+    p.quote-text {
+      font-weight: 600;
+      font-size: $quote-text-p-font-size;
+    }
+    p.quote-name {
+      padding-top: 2vmin;
+      font-weight: 400;
+      font-size: $quote-name-p-font-size;
+    }
+  }
+}
