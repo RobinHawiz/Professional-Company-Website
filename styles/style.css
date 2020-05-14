@@ -457,10 +457,11 @@ button {
   background: url("../images-video/palmtrees.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
-#video .video-chanel {
-  height: 60vh;
+#video .video-channel {
+  min-height: 60vh;
   background: rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,16 +478,33 @@ button {
           justify-content: center;
 }
 
-#video .video-chanel .title-and-play p {
+#video .video-channel .title-and-play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#video .video-channel .title-and-play p {
   color: white;
 }
 
-#video .video-chanel .title-and-play p.title {
+#video .video-channel .title-and-play p.title {
   font-size: calc(2rem + 1vmin);
   font-weight: 600;
 }
 
-#video .video-chanel .title-and-play button {
+#video .video-channel .title-and-play button {
+  margin-top: 2rem;
   border: none;
   background: transparent;
   display: -webkit-box;
@@ -502,17 +520,39 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-#video .video-chanel .title-and-play button .play-button {
-  border: 0.3rem solid white;
+#video .video-channel .title-and-play button:hover {
+  opacity: 0.7;
+}
+
+#video .video-channel .title-and-play button .play-button {
+  border: 0.2rem solid white;
   border-radius: 50%;
-  padding: 2.5rem;
+  padding: 1.7rem;
+  position: relative;
 }
 
-#video .video-chanel .title-and-play button p.button-text {
+#video .video-channel .title-and-play button .play-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
+  border-style: solid;
+  border-width: 0.7rem 0 0.7rem 1.2rem;
+  border-color: transparent transparent transparent white;
+}
+
+#video .video-channel .title-and-play button p.button-text {
   font-size: calc(1.2rem + 0.5vmin);
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  border-bottom: 0.15rem solid white;
+  margin-left: 1rem;
 }
 
 @media screen and (max-width: 688px) {
