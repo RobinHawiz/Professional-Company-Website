@@ -57,5 +57,38 @@
         }
       }
     }
+    .mini-footer {
+      .searchbar {
+        border-bottom: 0.2rem solid white;
+        @include flex(row, center, center);
+        label {
+          height: 2rem;
+          width: 2rem;
+          margin-right: 1rem;
+          display: inline-block;
+          svg {
+            fill: white;
+          }
+        }
+        input {
+          background: transparent;
+          border: none;
+          height: 3rem;
+          color: white;
+          font-size: $chanel-placeholder-text-font-size;
+          padding-left: 1rem;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: white;
+            font-family: $font-proxima;
+            font-size: $chanel-placeholder-text-font-size;
+          }
+        }
+      }
+    }
   }
 }
