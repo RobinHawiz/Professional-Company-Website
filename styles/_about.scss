@@ -57,6 +57,7 @@
         width: 100%;
         height: 100%;
         padding: 0rem 2.3rem;
+        @include flex(column, none, space-evenly);
         display: none;
         .text {
           @include flex(column, center, center);
@@ -73,6 +74,16 @@
             font-size: $project-p-content-font-size;
             line-height: 2.5;
             text-align: center;
+          }
+        }
+
+        .buttons {
+          @include flex(row, center, space-between);
+          button {
+            padding: 1rem;
+            background: transparent;
+            border: none;
+            outline: 0;
           }
         }
       }
