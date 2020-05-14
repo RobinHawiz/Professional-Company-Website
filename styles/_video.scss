@@ -8,7 +8,7 @@
   .video-channel {
     min-height: 60vh;
     background: rgba(0, 0, 0, 0.3);
-    @include flex(column, center, center);
+    @include flex(column, none, space-evenly);
 
     .title-and-play {
       @include flex(column, center, center);
@@ -58,9 +58,13 @@
       }
     }
     .mini-footer {
+      width: 90%;
+      margin: 0 auto;
       .searchbar {
-        border-bottom: 0.2rem solid white;
-        @include flex(row, center, center);
+        border-bottom: 0.1rem solid white;
+        width: 18rem;
+        @include flex(row, center, flex-start);
+
         label {
           height: 2rem;
           width: 2rem;
@@ -76,6 +80,7 @@
           height: 3rem;
           color: white;
           font-size: $chanel-placeholder-text-font-size;
+          width: 70%;
           padding-left: 1rem;
 
           &:focus {
