@@ -63,13 +63,13 @@
       @include flex(row, center, space-between);
       .searchbar {
         border-bottom: 0.1rem solid white;
-        width: 18rem;
+        width: calc(10rem + 6vmin);
         @include flex(row, center, flex-start);
 
         label {
-          height: 2rem;
-          width: 2rem;
-          margin-right: 1rem;
+          height: calc(1rem + 1vmin);
+          width: calc(1rem + 1vmin);
+          margin-right: 0.5vmin;
           display: inline-block;
           svg {
             fill: white;
@@ -116,7 +116,7 @@
       }
       .categories {
         width: calc(8rem + 6vmin);
-        padding-bottom: 1rem;
+        height: 3rem;
         border-bottom: 0.1rem solid white;
         transition: opacity 0.2s;
         &:hover {
@@ -134,6 +134,11 @@
           font-size: $chanel-placeholder-text-font-size;
           font-family: $font-proxima;
           @include flex(row, center, space-between);
+
+          &:focus {
+            outline: none;
+          }
+
           .dropdown-icon {
             height: 100%;
             width: calc(1rem + 0.5vmin);
