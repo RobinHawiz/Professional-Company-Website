@@ -97,18 +97,30 @@
       }
 
       .icons {
+        height: calc(1rem + 0.5vmin);
+        width: calc(3rem + 3vmin);
+        @include flex(row, center, space-between);
         .share-icon {
-          svg {
-            fill: white;
-            height: auto;
-            width: auto;
-            @include flex(row, center, center);
-            position: relative;
-            background: black;
-            g {
-              position: absolute;
-              transform: scale(0.1);
-            }
+          height: 100%;
+          width: calc(1rem + 1vmin);
+        }
+        .line {
+          width: 0.1rem;
+          height: 100%;
+          background: white;
+        }
+        .info-icon {
+          height: 100%;
+          width: calc(1rem + 1vmin);
+        }
+        svg {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          fill: white;
+          transition: opacity 0.2s;
+          &:hover {
+            opacity: 0.4;
           }
         }
       }
