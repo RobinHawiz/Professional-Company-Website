@@ -1,14 +1,27 @@
 #video {
   .background {
+    min-height: 65vh;
+    height: 60vh;
     background: url("../images-video/palmtrees.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+    @include flex(column, none, flex-end);
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+    }
   }
   .video-channel {
-    min-height: 60vh;
-    background: rgba(0, 0, 0, 0.3);
-    @include flex(column, none, space-evenly);
+    height: 70%;
+    padding-bottom: calc(2rem + 4vmin);
+    @include flex(column, none, space-between);
+    position: relative;
 
     .title-and-play {
       @include flex(column, center, center);
@@ -58,18 +71,18 @@
       }
     }
     .mini-footer {
-      width: 90%;
+      width: 95%;
       margin: 0 auto;
       @include flex(row, center, space-between);
       .searchbar {
+        padding-bottom: 0.5rem;
         border-bottom: 0.1rem solid white;
         width: calc(10rem + 6vmin);
         @include flex(row, center, flex-start);
 
         label {
-          height: calc(1rem + 1vmin);
-          width: calc(1rem + 1vmin);
-          margin-right: 0.5vmin;
+          height: calc(1rem + 0.6vmin);
+          width: calc(1rem + 0.6vmin);
           display: inline-block;
           svg {
             fill: white;
@@ -117,6 +130,7 @@
       .categories {
         width: calc(8rem + 6vmin);
         height: 3rem;
+        padding-bottom: 0.5rem;
         border-bottom: 0.1rem solid white;
         transition: opacity 0.2s;
         &:hover {

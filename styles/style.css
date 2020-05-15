@@ -454,15 +454,13 @@ button {
 }
 
 #video .background {
+  min-height: 65vh;
+  height: 60vh;
   background: url("../images-video/palmtrees.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-#video .video-channel {
-  min-height: 60vh;
-  background: rgba(0, 0, 0, 0.3);
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -473,9 +471,36 @@ button {
   -webkit-box-align: none;
       -ms-flex-align: none;
           align-items: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#video .background::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+}
+
+#video .video-channel {
+  height: 70%;
+  padding-bottom: calc(2rem + 4vmin);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
 }
 
 #video .video-channel .title-and-play {
@@ -556,7 +581,7 @@ button {
 }
 
 #video .video-channel .mini-footer {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,6 +599,7 @@ button {
 }
 
 #video .video-channel .mini-footer .searchbar {
+  padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid white;
   width: calc(10rem + 6vmin);
   display: -webkit-box;
@@ -592,9 +618,8 @@ button {
 }
 
 #video .video-channel .mini-footer .searchbar label {
-  height: calc(1rem + 1vmin);
-  width: calc(1rem + 1vmin);
-  margin-right: 0.5vmin;
+  height: calc(1rem + 0.6vmin);
+  width: calc(1rem + 0.6vmin);
   display: inline-block;
 }
 
@@ -607,7 +632,7 @@ button {
   border: none;
   height: 3rem;
   color: white;
-  font-size: calc(0.8rem + 0.5vmin);
+  font-size: calc(0.7rem + 0.5vmin);
   width: 70%;
   padding-left: 1rem;
 }
@@ -619,25 +644,25 @@ button {
 #video .video-channel .mini-footer .searchbar input::-webkit-input-placeholder {
   color: white;
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
-  font-size: calc(0.8rem + 0.5vmin);
+  font-size: calc(0.7rem + 0.5vmin);
 }
 
 #video .video-channel .mini-footer .searchbar input:-ms-input-placeholder {
   color: white;
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
-  font-size: calc(0.8rem + 0.5vmin);
+  font-size: calc(0.7rem + 0.5vmin);
 }
 
 #video .video-channel .mini-footer .searchbar input::-ms-input-placeholder {
   color: white;
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
-  font-size: calc(0.8rem + 0.5vmin);
+  font-size: calc(0.7rem + 0.5vmin);
 }
 
 #video .video-channel .mini-footer .searchbar input::placeholder {
   color: white;
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
-  font-size: calc(0.8rem + 0.5vmin);
+  font-size: calc(0.7rem + 0.5vmin);
 }
 
 #video .video-channel .mini-footer .icons {
@@ -677,6 +702,7 @@ button {
 #video .video-channel .mini-footer .categories {
   width: calc(8rem + 6vmin);
   height: 3rem;
+  padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid white;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -694,7 +720,7 @@ button {
   border: none;
   white-space: nowrap;
   color: white;
-  font-size: calc(0.8rem + 0.5vmin);
+  font-size: calc(0.7rem + 0.5vmin);
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
