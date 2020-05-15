@@ -453,9 +453,13 @@ button {
   font-size: calc(1rem + 0.5vmin);
 }
 
+#video {
+  min-height: 95vh;
+}
+
 #video .background {
   min-height: 65vh;
-  height: 60vh;
+  height: 65vh;
   background: url("../images-video/palmtrees.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -774,7 +778,6 @@ button {
 
 #video .video-previews {
   min-height: 30vh;
-  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,7 +796,8 @@ button {
 }
 
 #video .video-previews .video {
-  height: 100%;
+  min-height: 15rem;
+  height: 30vh;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20rem;
           flex: 1 1 20rem;
