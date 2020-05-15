@@ -26,6 +26,12 @@ h1 {
   font-weight: 700;
 }
 
+h2 {
+  font-size: calc(2rem + 1.5vmin);
+  color: #12139c;
+  font-weight: 700;
+}
+
 li {
   list-style: none;
 }
@@ -983,6 +989,133 @@ button {
     -webkit-transform: translateY(30%);
             transform: translateY(30%);
   }
+}
+
+#formss {
+  min-height: 42vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#formss .formss-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#formss .formss-wrapper h2 {
+  padding: 4rem 0rem 1rem 0rem;
+}
+
+#formss .formss-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  width: 45vw;
+}
+
+#formss .formss-wrapper form input,
+#formss .formss-wrapper form input::-webkit-input-placeholder,
+#formss .formss-wrapper form textarea,
+#formss .formss-wrapper form textarea::-webkit-input-placeholder {
+  color: #12139c;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  font-size: calc(0.8rem + 0.5vmin);
+}
+
+#formss .formss-wrapper form input,
+#formss .formss-wrapper form input:-ms-input-placeholder,
+#formss .formss-wrapper form textarea,
+#formss .formss-wrapper form textarea:-ms-input-placeholder {
+  color: #12139c;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  font-size: calc(0.8rem + 0.5vmin);
+}
+
+#formss .formss-wrapper form input,
+#formss .formss-wrapper form input::-ms-input-placeholder,
+#formss .formss-wrapper form textarea,
+#formss .formss-wrapper form textarea::-ms-input-placeholder {
+  color: #12139c;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  font-size: calc(0.8rem + 0.5vmin);
+}
+
+#formss .formss-wrapper form input,
+#formss .formss-wrapper form input::placeholder,
+#formss .formss-wrapper form textarea,
+#formss .formss-wrapper form textarea::placeholder {
+  color: #12139c;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  font-size: calc(0.8rem + 0.5vmin);
+}
+
+#formss .formss-wrapper form input,
+#formss .formss-wrapper form textarea {
+  border: 0.1rem solid #12139c;
+  margin: 0.5rem 0rem;
+}
+
+#formss .formss-wrapper form input:focus,
+#formss .formss-wrapper form textarea:focus {
+  outline: none;
+}
+
+#formss .formss-wrapper form input {
+  height: 5rem;
+  padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+}
+
+#formss .formss-wrapper form textarea {
+  resize: none;
+  margin: 0.5rem 0rem;
+  padding: 2rem 0.3rem 0.3rem 1.2rem;
+}
+
+#formss .formss-wrapper form input.button {
+  padding: 0;
+  height: calc(2rem + 2vmin);
+  width: calc(3rem + 8.5vmin);
+  border: none;
+  background: #12139c;
+  color: white;
+  font-size: calc(0.9rem + 0.5vmin);
+  margin-top: 1rem;
+  font-weight: 600;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 688px) {
