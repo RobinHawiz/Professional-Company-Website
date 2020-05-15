@@ -115,19 +115,28 @@
         }
       }
       .categories {
-        width: calc(8rem + 4vmin);
+        width: calc(8rem + 6vmin);
+        padding-bottom: 1rem;
+        border-bottom: 0.1rem solid white;
+        transition: opacity 0.2s;
+        &:hover {
+          opacity: 0.8;
+        }
 
         button {
           height: 100%;
+          width: 80%;
+          margin: auto;
           background: transparent;
           border: none;
           white-space: nowrap;
           color: white;
           font-size: $chanel-placeholder-text-font-size;
           font-family: $font-proxima;
-          @include flex(row, center, center);
+          @include flex(row, center, space-between);
           .dropdown-icon {
-            padding-left: 2.5rem;
+            height: 100%;
+            width: calc(1rem + 0.5vmin);
             @include flex(row, center, center);
           }
         }
