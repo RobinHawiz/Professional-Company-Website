@@ -674,7 +674,51 @@ button {
   width: calc(1rem + 1vmin);
 }
 
-#video .video-channel .mini-footer .icons svg {
+#video .video-channel .mini-footer .categories {
+  width: calc(8rem + 4vmin);
+}
+
+#video .video-channel .mini-footer .categories button {
+  height: 100%;
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#video .video-channel .mini-footer .categories button .dropdown-icon {
+  padding-left: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#video .video-channel .mini-footer svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -683,7 +727,7 @@ button {
   transition: opacity 0.2s;
 }
 
-#video .video-channel .mini-footer .icons svg:hover {
+#video .video-channel .mini-footer svg:hover {
   opacity: 0.4;
 }
 

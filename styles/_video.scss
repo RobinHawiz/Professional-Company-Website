@@ -113,15 +113,34 @@
           height: 100%;
           width: calc(1rem + 1vmin);
         }
-        svg {
-          width: 100%;
+      }
+      .categories {
+        width: calc(8rem + 4vmin);
+
+        button {
           height: 100%;
-          cursor: pointer;
-          fill: white;
-          transition: opacity 0.2s;
-          &:hover {
-            opacity: 0.4;
+          background: transparent;
+          border: none;
+          white-space: nowrap;
+          color: white;
+          font-size: $chanel-placeholder-text-font-size;
+          font-family: $font-proxima;
+          @include flex(row, center, center);
+          .dropdown-icon {
+            padding-left: 2.5rem;
+            @include flex(row, center, center);
           }
+        }
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        fill: white;
+        transition: opacity 0.2s;
+        &:hover {
+          opacity: 0.4;
         }
       }
     }
