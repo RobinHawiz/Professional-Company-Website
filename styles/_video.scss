@@ -164,69 +164,87 @@
     min-height: 30vh;
     height: 30vh;
     @include flex(row, center, none);
+    flex-wrap: wrap;
 
     .video {
       height: 100%;
       flex: 1 1 20rem;
       font-size: $preview-p-title-font-size;
       color: white;
-      @include flex(column, center, center);
       position: relative;
+      @include flex(column, center, center);
 
       &::before {
         content: "";
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: black;
         position: absolute;
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.4s, opacity 0.4s linear;
       }
 
       &:hover::before {
-        display: block;
+        visibility: visible;
+        opacity: 0.6;
       }
 
-      p {
-        position: relative;
+      &:hover .video-content {
+        animation: textAnimationIn 0.8s;
+        visibility: visible;
+        opacity: 1;
       }
 
-      button {
-        border: none;
-        background: transparent;
-        color: white;
-        margin-top: 2rem;
-        @include flex(row, center, center);
-        transition: opacity 0.2s;
+      .video-content {
+        @include flex(column, center, center);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.4s, opacity 0.4s linear;
+        animation: textAnimationOut 0.8s;
 
-        &:hover {
-          opacity: 0.7;
+        p {
+          position: relative;
         }
 
-        .play-button {
-          border: 0.2rem solid white;
-          border-radius: 50%;
-          padding: 1.4rem;
-          position: relative;
+        button {
+          border: none;
+          background: transparent;
+          color: white;
+          margin-top: 2rem;
+          @include flex(row, center, center);
+          transition: opacity 0.2s;
 
-          &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 55%;
-            top: 50%;
-            transform: translate(-55%, -50%);
-            border-style: solid;
-            border-width: 0.6rem 0 0.6rem 1.1rem;
-            border-color: transparent transparent transparent
-              rgba(255, 255, 255, 1);
+          &:hover {
+            opacity: 0.7;
           }
-        }
-        .button-text {
-          font-family: $font-proxima;
-          font-size: $preview-p-text-font-size;
-          border-bottom: 0.15rem solid white;
-          margin-left: 1rem;
-          position: relative;
+
+          .play-button {
+            border: 0.2rem solid white;
+            border-radius: 50%;
+            padding: 1.4rem;
+            position: relative;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 55%;
+              top: 50%;
+              transform: translate(-55%, -50%);
+              border-style: solid;
+              border-width: 0.6rem 0 0.6rem 1.1rem;
+              border-color: transparent transparent transparent
+                rgba(255, 255, 255, 1);
+            }
+          }
+          .button-text {
+            font-family: $font-proxima;
+            font-size: $preview-p-text-font-size;
+            border-bottom: 0.15rem solid white;
+            margin-left: 1rem;
+            position: relative;
+          }
         }
       }
     }
@@ -245,5 +263,23 @@
       background-position: center;
       background-size: cover;
     }
+  }
+}
+
+@keyframes textAnimationIn {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes textAnimationOut {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(30%);
   }
 }

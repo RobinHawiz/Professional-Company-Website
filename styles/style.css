@@ -762,6 +762,8 @@ button {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #video .video-previews .video {
@@ -771,6 +773,7 @@ button {
           flex: 1 1 20rem;
   font-size: calc(1rem + 1vmin);
   color: white;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -784,27 +787,59 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
 #video .video-previews .video::before {
   content: "";
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: black;
   position: absolute;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.4s, opacity 0.4s linear;
+  transition: visibility 0.4s, opacity 0.4s linear;
 }
 
 #video .video-previews .video:hover::before {
-  display: block;
+  visibility: visible;
+  opacity: 0.6;
 }
 
-#video .video-previews .video p {
+#video .video-previews .video:hover .video-content {
+  -webkit-animation: textAnimationIn 0.8s;
+          animation: textAnimationIn 0.8s;
+  visibility: visible;
+  opacity: 1;
+}
+
+#video .video-previews .video .video-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.4s, opacity 0.4s linear;
+  transition: visibility 0.4s, opacity 0.4s linear;
+  -webkit-animation: textAnimationOut 0.8s;
+          animation: textAnimationOut 0.8s;
+}
+
+#video .video-previews .video .video-content p {
   position: relative;
 }
 
-#video .video-previews .video button {
+#video .video-previews .video .video-content button {
   border: none;
   background: transparent;
   color: white;
@@ -826,18 +861,18 @@ button {
   transition: opacity 0.2s;
 }
 
-#video .video-previews .video button:hover {
+#video .video-previews .video .video-content button:hover {
   opacity: 0.7;
 }
 
-#video .video-previews .video button .play-button {
+#video .video-previews .video .video-content button .play-button {
   border: 0.2rem solid white;
   border-radius: 50%;
   padding: 1.4rem;
   position: relative;
 }
 
-#video .video-previews .video button .play-button::after {
+#video .video-previews .video .video-content button .play-button::after {
   content: "";
   display: block;
   position: absolute;
@@ -850,7 +885,7 @@ button {
   border-color: transparent transparent transparent white;
 }
 
-#video .video-previews .video button .button-text {
+#video .video-previews .video .video-content button .button-text {
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
   font-size: calc(1rem + 0.5vmin);
   border-bottom: 0.15rem solid white;
@@ -874,6 +909,50 @@ button {
   background: url("../images-video/lifeguard.jpg");
   background-position: center;
   background-size: cover;
+}
+
+@-webkit-keyframes textAnimationIn {
+  from {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes textAnimationIn {
+  from {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes textAnimationOut {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+}
+
+@keyframes textAnimationOut {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
 }
 
 @media screen and (max-width: 688px) {
