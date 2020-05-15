@@ -159,4 +159,91 @@
       }
     }
   }
+
+  .video-previews {
+    min-height: 30vh;
+    height: 30vh;
+    @include flex(row, center, none);
+
+    .video {
+      height: 100%;
+      flex: 1 1 20rem;
+      font-size: $preview-p-title-font-size;
+      color: white;
+      @include flex(column, center, center);
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        display: none;
+      }
+
+      &:hover::before {
+        display: block;
+      }
+
+      p {
+        position: relative;
+      }
+
+      button {
+        border: none;
+        background: transparent;
+        color: white;
+        margin-top: 2rem;
+        @include flex(row, center, center);
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        .play-button {
+          border: 0.2rem solid white;
+          border-radius: 50%;
+          padding: 1.4rem;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 55%;
+            top: 50%;
+            transform: translate(-55%, -50%);
+            border-style: solid;
+            border-width: 0.6rem 0 0.6rem 1.1rem;
+            border-color: transparent transparent transparent
+              rgba(255, 255, 255, 1);
+          }
+        }
+        .button-text {
+          font-family: $font-proxima;
+          font-size: $preview-p-text-font-size;
+          border-bottom: 0.15rem solid white;
+          margin-left: 1rem;
+          position: relative;
+        }
+      }
+    }
+    .video1 {
+      background: url("../images-video/taxi.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    .video2 {
+      background: url("../images-video/canoe.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    .video3 {
+      background: url("../images-video/lifeguard.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+  }
 }
