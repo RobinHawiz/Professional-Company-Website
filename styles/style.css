@@ -1374,7 +1374,7 @@ footer p {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
-  min-height: 25rem;
+  min-height: 30rem;
   height: 27vh;
   width: calc(4rem + 70vmin);
   color: #12139c;
@@ -1415,15 +1415,71 @@ footer p {
           justify-content: none;
 }
 
-#blogg .blogg-posts .post .post-info .top-info .author p {
+#blogg .blogg-posts .post .post-info .top-info .author .profile-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  width: 4rem;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .profile-image img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .profile-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  margin-left: 1rem;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .profile-bio .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .profile-bio .name p {
   padding-right: 0.2rem;
 }
 
-#blogg .blogg-posts .post .post-info .top-info .author svg {
+#blogg .blogg-posts .post .post-info .top-info .author .profile-bio .name svg {
   fill: #12139c;
 }
 
-#blogg .blogg-posts .post .post-info .top-info ul {
+#blogg .blogg-posts .post .post-info .top-info .author .profile-bio ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1439,7 +1495,7 @@ footer p {
           justify-content: none;
 }
 
-#blogg .blogg-posts .post .post-info .top-info ul li.dot {
+#blogg .blogg-posts .post .post-info .top-info .author .profile-bio ul li.dot {
   margin-left: 2.5rem;
   list-style: disc;
 }
@@ -1472,7 +1528,7 @@ footer p {
 
 #blogg .blogg-posts .post .post-info .bottom-info .content p.text {
   padding-left: 0.5rem;
-  font-size: calc(0.8rem + 0.3vmin);
+  font-size: calc(0.8rem + 0.5vmin);
   margin-bottom: 1rem;
 }
 
@@ -1523,7 +1579,7 @@ footer p {
 #blogg .blogg-posts .post p,
 #blogg .blogg-posts .post a,
 #blogg .blogg-posts .post li {
-  font-size: calc(0.8rem + 0.3vmin);
+  font-size: calc(0.8rem + 0.5vmin);
 }
 
 #blogg .blogg-posts .post a {
