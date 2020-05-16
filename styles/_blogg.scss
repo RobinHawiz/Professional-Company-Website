@@ -2,26 +2,81 @@
   @include flex(column, center, none);
   flex-wrap: wrap;
 
+  .header {
+    margin-top: 4rem;
+    width: calc(4rem + 70vmin);
+    @include flex(row, center, space-between);
+
+    p {
+      font-size: $blogg-p-title-font-size;
+      color: $theme-color2;
+      font-weight: 200;
+    }
+
+    .searchbar {
+      @include flex(row, center, none);
+      border-bottom: 0.1rem solid rgba(18, 19, 156, 0.25);
+
+      label {
+        height: calc(1rem + 0.6vmin);
+        width: calc(1rem + 0.6vmin);
+        display: inline-block;
+        svg {
+          fill: $theme-color1;
+        }
+      }
+
+      input {
+        border: none;
+        padding-left: 1rem;
+        font-size: $blogg-input-text-font-size;
+        font-weight: 200;
+        width: calc(5rem + 12vmin);
+        color: $theme-color1;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $theme-color1;
+          font-size: $blogg-input-text-font-size;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+
   .blogg-posts {
     .post {
       @include flex(row, none, none);
-
       min-height: 30rem;
-
       height: 27vh;
       width: calc(4rem + 70vmin);
       color: $theme-color1;
       font-weight: 200;
       border: 0.1rem solid rgba(18, 19, 156, 0.25);
-      margin: 0rem 2rem;
+      margin: 4rem 2rem;
 
-      .post-image {
+      .post-image1 {
         background: url("../blogg/images/tape.webp");
+      }
+      .post-image2 {
+        background: url("../blogg/images/ananas.webp");
+      }
+      .post-image3 {
+        background: url("../blogg/images/cactus.webp");
+      }
+
+      .post-image1,
+      .post-image2,
+      .post-image3 {
         width: 50%;
         height: 100%;
         background-size: cover;
         background-position: center;
       }
+
       .post-info {
         height: 100%;
         width: 50%;
@@ -31,40 +86,45 @@
 
         .top-info {
           .author {
-            @include flex(row, center, none);
-
-            .profile-image {
+            @include flex(row, center, space-between);
+            .author-info {
               @include flex(row, center, none);
-              width: 4rem;
+              .profile-image {
+                @include flex(row, center, none);
+                width: 4rem;
 
-              img {
-                border-radius: 50%;
-                height: 100%;
-                width: 100%;
+                img {
+                  border-radius: 50%;
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              .profile-bio {
+                @include flex(column, none, none);
+                margin-left: 1rem;
+
+                .name {
+                  @include flex(row, none, none);
+                  p {
+                    padding-right: 0.2rem;
+                  }
+                  svg {
+                    fill: $theme-color1;
+                  }
+                }
+
+                ul {
+                  @include flex(row, center, none);
+
+                  li.dot {
+                    margin-left: 2.9rem;
+                    list-style: disc;
+                  }
+                }
               }
             }
-            .profile-bio {
-              @include flex(column, none, none);
-              margin-left: 1rem;
-
-              .name {
-                @include flex(row, none, none);
-                p {
-                  padding-right: 0.2rem;
-                }
-                svg {
-                  fill: $theme-color1;
-                }
-              }
-
-              ul {
-                @include flex(row, center, none);
-
-                li.dot {
-                  margin-left: 2.5rem;
-                  list-style: disc;
-                }
-              }
+            svg {
+              fill: $theme-color1;
             }
           }
         }
@@ -98,6 +158,7 @@
 
             .text {
               @include flex(row, center, center);
+              padding-bottom: 1rem;
 
               p {
                 padding-right: 1.5rem;
