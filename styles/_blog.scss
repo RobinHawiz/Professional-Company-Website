@@ -11,9 +11,9 @@
   }
 
   .blog-post {
-    height: calc(10rem + 25vmin);
-    width: calc(10rem + 25vmin);
-    margin: 2rem;
+    height: calc(20rem + 18vmin);
+    width: calc(20rem + 18vmin);
+    margin: 1.8rem;
     background-size: cover;
     background-position: center;
     @include flex(column, none, space-between);
@@ -31,17 +31,67 @@
 
     .top-info {
       position: relative;
-      padding: 2rem 0rem 0rem 3rem;
+      padding: 2rem 0rem 0rem 2rem;
+
+      .author {
+        @include flex(row, center, none);
+        p {
+          padding-right: 0.2rem;
+        }
+        svg {
+          fill: white;
+        }
+      }
+
+      ul {
+        @include flex(row, center, none);
+
+        li.dot {
+          margin-left: 2.1rem;
+          list-style: disc;
+        }
+      }
     }
 
     .bottom-info {
       position: relative;
-      padding: 0rem 3rem 2rem 3rem;
+      padding: 0rem 2rem 2rem 2rem;
+
+      .mini-footer {
+        @include flex(row, center, space-between);
+        padding-top: 1rem;
+
+        .text {
+          @include flex(row, center, center);
+
+          p {
+            padding-right: 1.5rem;
+          }
+        }
+
+        svg {
+          fill: transparent;
+          stroke: #e84a43;
+          stroke-width: 0.15rem;
+        }
+      }
 
       p.title {
         font-size: $blog-p-title-font-size;
+        padding-left: 0.5rem;
+        padding-bottom: 1rem;
         border-bottom: 0.1rem solid white;
       }
+    }
+
+    p,
+    a,
+    li {
+      font-size: $blog-p-text-font-size;
+    }
+
+    a {
+      color: white;
     }
   }
 }
