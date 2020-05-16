@@ -1342,6 +1342,372 @@ footer p {
   margin-bottom: 3rem;
 }
 
+#blogg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#blogg .header {
+  margin-top: 4rem;
+  width: calc(4rem + 70vmin);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#blogg .header p {
+  font-size: calc(1.4rem + 0.6vmin);
+  color: #f4d2d3;
+  font-weight: 200;
+}
+
+#blogg .header .searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  border-bottom: 0.1rem solid rgba(18, 19, 156, 0.25);
+}
+
+#blogg .header .searchbar label {
+  height: calc(1rem + 0.6vmin);
+  width: calc(1rem + 0.6vmin);
+  display: inline-block;
+}
+
+#blogg .header .searchbar label svg {
+  fill: #12139c;
+}
+
+#blogg .header .searchbar input {
+  border: none;
+  padding-left: 1rem;
+  font-size: calc(1.4rem + 0.6vmin);
+  font-weight: 200;
+  width: calc(5rem + 12vmin);
+  color: #12139c;
+}
+
+#blogg .header .searchbar input:focus {
+  outline: none;
+}
+
+#blogg .header .searchbar input::-webkit-input-placeholder {
+  color: #12139c;
+  font-size: calc(1.4rem + 0.6vmin);
+  font-weight: 200;
+}
+
+#blogg .header .searchbar input:-ms-input-placeholder {
+  color: #12139c;
+  font-size: calc(1.4rem + 0.6vmin);
+  font-weight: 200;
+}
+
+#blogg .header .searchbar input::-ms-input-placeholder {
+  color: #12139c;
+  font-size: calc(1.4rem + 0.6vmin);
+  font-weight: 200;
+}
+
+#blogg .header .searchbar input::placeholder {
+  color: #12139c;
+  font-size: calc(1.4rem + 0.6vmin);
+  font-weight: 200;
+}
+
+#blogg .blogg-posts .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  min-height: 30rem;
+  height: 27vh;
+  width: calc(4rem + 70vmin);
+  color: #12139c;
+  font-weight: 200;
+  border: 0.1rem solid rgba(18, 19, 156, 0.25);
+  margin: 4rem 2rem;
+}
+
+#blogg .blogg-posts .post .post-image1 {
+  background: url("../blogg/images/tape.webp");
+}
+
+#blogg .blogg-posts .post .post-image2 {
+  background: url("../blogg/images/ananas.webp");
+}
+
+#blogg .blogg-posts .post .post-image3 {
+  background: url("../blogg/images/cactus.webp");
+}
+
+#blogg .blogg-posts .post .post-image1,
+#blogg .blogg-posts .post .post-image2,
+#blogg .blogg-posts .post .post-image3 {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#blogg .blogg-posts .post .post-info {
+  height: 100%;
+  width: 50%;
+  min-width: 25rem;
+  padding: 0rem calc(1rem + 2vmin);
+  padding-top: 2rem;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  width: 4rem;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-image img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  margin-left: 1rem;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-bio .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-bio .name p {
+  padding-right: 0.2rem;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-bio .name svg {
+  fill: #12139c;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-bio ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author .author-info .profile-bio ul li.dot {
+  margin-left: 2.9rem;
+  list-style: disc;
+}
+
+#blogg .blogg-posts .post .post-info .top-info .author svg {
+  fill: #12139c;
+}
+
+#blogg .blogg-posts .post .post-info .bottom-info {
+  height: 75%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#blogg .blogg-posts .post .post-info .bottom-info .content p.title {
+  font-size: calc(1.4rem + 0.6vmin);
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  font-weight: 600;
+}
+
+#blogg .blogg-posts .post .post-info .bottom-info .content p.text {
+  padding-left: 0.5rem;
+  font-size: calc(0.8rem + 0.5vmin);
+  margin-bottom: 1rem;
+}
+
+#blogg .blogg-posts .post .post-info .bottom-info .mini-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 0.1rem solid rgba(18, 19, 156, 0.25);
+}
+
+#blogg .blogg-posts .post .post-info .bottom-info .mini-footer .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1rem;
+}
+
+#blogg .blogg-posts .post .post-info .bottom-info .mini-footer .text p {
+  padding-right: 1.5rem;
+}
+
+#blogg .blogg-posts .post .post-info .bottom-info .mini-footer svg {
+  fill: transparent;
+  stroke: #e84a43;
+  stroke-width: 0.15rem;
+}
+
+#blogg .blogg-posts .post p,
+#blogg .blogg-posts .post a,
+#blogg .blogg-posts .post li {
+  font-size: calc(0.8rem + 0.5vmin);
+}
+
+#blogg .blogg-posts .post a {
+  color: #12139c;
+}
+
 /* MEDIA Queries */
 @media screen and (max-width: 688px) {
   /* NAVBAR */
