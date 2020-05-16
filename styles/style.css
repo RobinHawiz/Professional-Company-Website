@@ -1831,6 +1831,10 @@ footer p {
   margin-top: 5rem;
 }
 
+#paket-priser .paket-priser-wrapper .packages .package .info button:hover {
+  opacity: 0.6;
+}
+
 #paket-priser .paket-priser-wrapper .packages .package .features {
   display: -webkit-box;
   display: -ms-flexbox;
