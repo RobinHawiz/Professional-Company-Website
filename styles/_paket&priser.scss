@@ -6,11 +6,12 @@
   .paket-priser-wrapper {
     padding: 2rem 0rem;
     h2 {
-      padding-bottom: 4rem;
+      padding-bottom: calc(3rem + 2vmin);
       font-weight: normal;
     }
     .packages {
       @include flex(row, center, center);
+      margin-bottom: 12rem;
       .package {
         @include flex(column, center, center);
         width: calc(20rem + 7.5vmin);

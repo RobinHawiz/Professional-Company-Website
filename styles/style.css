@@ -1731,7 +1731,7 @@ footer p {
 }
 
 #paket-priser .paket-priser-wrapper h2 {
-  padding-bottom: 4rem;
+  padding-bottom: calc(3rem + 2vmin);
   font-weight: normal;
 }
 
@@ -1749,6 +1749,7 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 12rem;
 }
 
 #paket-priser .paket-priser-wrapper .packages .package {
