@@ -5,6 +5,11 @@
   src: url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.woff") format("woff"), url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/55c4f556836775174bfac94178a3fe82.svg#ProximaNW01-Reg") format("svg");
 }
 
+/* FONT-SIZES */
+/* FONT-FAMILIES*/
+/* WEBSITE-COLORS */
+/* MIXINS */
+/* IPMORTS */
 * {
   margin: 0;
   padding: 0;
@@ -1118,6 +1123,81 @@ button {
   cursor: pointer;
 }
 
+#blog {
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#blog .blog-post1 {
+  background: url("../images-blog/tape.webp");
+}
+
+#blog .blog-post2 {
+  background: url("../images-blog/purplefruit.webp");
+}
+
+#blog .blog-post {
+  height: calc(10rem + 25vmin);
+  width: calc(10rem + 25vmin);
+  margin: 2rem;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  color: white;
+}
+
+#blog .blog-post::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(18, 19, 156, 0.3);
+}
+
+#blog .blog-post .top-info {
+  position: relative;
+  padding: 2rem 0rem 0rem 3rem;
+}
+
+#blog .blog-post .bottom-info {
+  position: relative;
+  padding: 0rem 3rem 2rem 3rem;
+}
+
+#blog .blog-post .bottom-info p.title {
+  font-size: calc(1.2rem + 1vmin);
+  border-bottom: 0.1rem solid white;
+}
+
+/* MEDIA Queries */
 @media screen and (max-width: 688px) {
   /* NAVBAR */
   .navbar nav {

@@ -1,0 +1,47 @@
+#blog {
+  min-height: 50vh;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+
+  .blog-post1 {
+    background: url("../images-blog/tape.webp");
+  }
+  .blog-post2 {
+    background: url("../images-blog/purplefruit.webp");
+  }
+
+  .blog-post {
+    height: calc(10rem + 25vmin);
+    width: calc(10rem + 25vmin);
+    margin: 2rem;
+    background-size: cover;
+    background-position: center;
+    @include flex(column, none, space-between);
+    position: relative;
+    font-family: $font-proxima;
+    color: white;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: rgba(18, 19, 156, 0.3);
+    }
+
+    .top-info {
+      position: relative;
+      padding: 2rem 0rem 0rem 3rem;
+    }
+
+    .bottom-info {
+      position: relative;
+      padding: 0rem 3rem 2rem 3rem;
+
+      p.title {
+        font-size: $blog-p-title-font-size;
+        border-bottom: 0.1rem solid white;
+      }
+    }
+  }
+}
