@@ -1,0 +1,108 @@
+#blogg {
+  @include flex(column, center, none);
+  flex-wrap: wrap;
+
+  .blogg-posts {
+    .post {
+      @include flex(row, none, none);
+
+      min-height: 25rem;
+
+      height: 27vh;
+      width: calc(4rem + 70vmin);
+      color: $theme-color1;
+      font-weight: 200;
+      border: 0.1rem solid rgba(18, 19, 156, 0.25);
+      margin: 0rem 2rem;
+
+      .post-image {
+        background: url("../blogg/images/tape.webp");
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+      .post-info {
+        height: 100%;
+        width: 50%;
+        min-width: 25rem;
+        padding: 0rem calc(1rem + 2vmin);
+        padding-top: 2rem;
+
+        .top-info {
+          .author {
+            @include flex(row, center, none);
+            p {
+              padding-right: 0.2rem;
+            }
+            svg {
+              fill: $theme-color1;
+            }
+          }
+
+          ul {
+            @include flex(row, center, none);
+
+            li.dot {
+              margin-left: 2.5rem;
+              list-style: disc;
+            }
+          }
+        }
+
+        .bottom-info {
+          height: 75%;
+          position: relative;
+
+          @include flex(column, none, space-between);
+
+          .content {
+            p.title {
+              font-size: $blogg-p-title-font-size;
+              padding-left: 0.5rem;
+              padding-bottom: 1rem;
+              padding-top: 1.5rem;
+              font-weight: 600;
+            }
+
+            p.text {
+              padding-left: 0.5rem;
+              font-size: $blogg-p-text-font-size;
+              margin-bottom: 1rem;
+            }
+          }
+
+          .mini-footer {
+            @include flex(row, center, space-between);
+            padding-top: 1rem;
+            border-top: 0.1rem solid rgba(18, 19, 156, 0.25);
+
+            .text {
+              @include flex(row, center, center);
+
+              p {
+                padding-right: 1.5rem;
+              }
+            }
+
+            svg {
+              fill: transparent;
+              stroke: #e84a43;
+              stroke-width: 0.15rem;
+            }
+          }
+        }
+      }
+
+      p,
+      a,
+      li {
+        font-size: $blogg-p-text-font-size;
+      }
+
+      a {
+        color: $theme-color1;
+      }
+    }
+  }
+}
