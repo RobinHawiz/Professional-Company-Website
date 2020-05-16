@@ -32,6 +32,7 @@ $forms-placeholder-text-font-size: calc(0.8rem + 0.5vmin);
 $forms-button-text-font-size: calc(0.9rem + 0.5vmin);
 $blog-p-title-font-size: calc(1.2rem + 1vmin);
 $blog-p-text-font-size: 1.2rem;
+$footer-p-text-font-size: 1.4rem;
 
 /* FONT-FAMILIES*/
 
@@ -61,6 +62,7 @@ $theme-color2: #f4d2d3;
 @import "video";
 @import "forms";
 @import "blog";
+@import "footer";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
 
 /* MEDIA Queries */
