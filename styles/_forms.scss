@@ -1,0 +1,60 @@
+#formss {
+  min-height: 42vh;
+  @include flex(column, center, center);
+  .formss-wrapper {
+    @include flex(column, center, center);
+
+    h2 {
+      padding: 4rem 0rem 1rem 0rem;
+    }
+
+    form {
+      @include flex(column, none, none);
+      width: 45vw;
+
+      input,
+      input::placeholder,
+      textarea,
+      textarea::placeholder {
+        color: $theme-color1;
+        font-family: $font-proxima;
+        font-size: $forms-placeholder-text-font-size;
+      }
+
+      input,
+      textarea {
+        border: 0.1rem solid $theme-color1;
+        margin: 0.5rem 0rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input {
+        height: 5rem;
+        padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+      }
+
+      textarea {
+        resize: none;
+        margin: 0.5rem 0rem;
+        padding: 2rem 0.3rem 0.3rem 1.2rem;
+      }
+
+      input.button {
+        padding: 0;
+        height: calc(2rem + 2vmin);
+        width: calc(3rem + 8.5vmin);
+        border: none;
+        background: $theme-color1;
+        color: white;
+        font-size: $forms-button-text-font-size;
+        margin-top: 1rem;
+        font-weight: 600;
+        align-self: flex-end;
+        cursor: pointer;
+      }
+    }
+  }
+}

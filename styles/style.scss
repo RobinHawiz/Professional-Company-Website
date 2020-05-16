@@ -13,5 +13,87 @@
       format("svg");
 }
 
+/* FONT-SIZES */
+
+$header1: 7.2rem;
+$header2: calc(2rem + 1.5vmin);
+$nav-logo-font-size: 2.2rem;
+$nav-a-font-size: 1.4rem;
+$project-p-title-font-size: calc(1.2rem + 1vmin);
+$project-p-content-font-size: calc(0.7rem + 0.5vmin);
+$quote-p-text-font-size: calc(1rem + 1vmin);
+$quote-p-name-font-size: calc(1rem + 0.5vmin);
+$chanel-p-title-font-size: calc(2rem + 1vmin);
+$chanel-p-text-font-size: calc(1.2rem + 0.5vmin);
+$chanel-placeholder-text-font-size: calc(0.7rem + 0.5vmin);
+$preview-p-title-font-size: calc(1rem + 1vmin);
+$preview-p-text-font-size: calc(1rem + 0.5vmin);
+$forms-placeholder-text-font-size: calc(0.8rem + 0.5vmin);
+$forms-button-text-font-size: calc(0.9rem + 0.5vmin);
+$blog-p-title-font-size: calc(1.2rem + 1vmin);
+$blog-p-text-font-size: 1.2rem;
+$footer-p-text-font-size: 1.4rem;
+
+/* FONT-FAMILIES*/
+
+$font-proxima: "ProximaNW01-Reg", Fallback, sans-serif;
+
+/* WEBSITE-COLORS */
+
+$theme-color1: #12139c;
+$theme-color1-opacity: rgba(18, 19, 156, 0.4);
+$theme-color2: #f4d2d3;
+
+/* MIXINS */
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+/* IPMORTS */
+
 @import "globals";
+@import "navbar";
+@import "about";
+@import "quote";
+@import "video";
+@import "forms";
+@import "blog";
+@import "footer";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
+
+/* MEDIA Queries */
+
+@media screen and (max-width: 688px) {
+  /* NAVBAR */
+
+  .navbar {
+    nav {
+      justify-content: center;
+      .links-n-shit {
+        justify-content: center;
+      }
+    }
+  }
+
+  /* ABOUT SECTION */
+
+  #about {
+    .info {
+      justify-content: center;
+      .info-box {
+        width: 60vw;
+        h1 {
+          font-size: calc(1rem + 8vmin);
+        }
+        p {
+          font-size: calc(1rem + 2vmin);
+          padding: 1.5rem 0rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,300 @@
+#video {
+  min-height: 95vh;
+  .background {
+    min-height: 65vh;
+    height: 65vh;
+    background: url("../images-video/palmtrees.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include flex(column, none, flex-end);
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+    }
+  }
+  .video-channel {
+    height: 70%;
+    padding-bottom: calc(2rem + 4vmin);
+    @include flex(column, none, space-between);
+    position: relative;
+
+    .title-and-play {
+      @include flex(column, center, center);
+      p {
+        color: white;
+      }
+      p.title {
+        font-size: $chanel-p-title-font-size;
+        font-weight: 600;
+      }
+
+      button {
+        margin-top: 2rem;
+        border: none;
+        background: transparent;
+        @include flex(row, center, center);
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 0.7;
+        }
+        .play-button {
+          border: 0.2rem solid white;
+          border-radius: 50%;
+          padding: 1.7rem;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 60%;
+            top: 50%;
+            transform: translate(-60%, -50%);
+            border-style: solid;
+            border-width: 0.7rem 0 0.7rem 1.2rem;
+            border-color: transparent transparent transparent
+              rgba(255, 255, 255, 1);
+          }
+        }
+        p.button-text {
+          font-size: $chanel-p-text-font-size;
+          font-family: $font-proxima;
+          border-bottom: 0.15rem solid white;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .mini-footer {
+      width: 95%;
+      margin: 0 auto;
+      @include flex(row, center, space-between);
+      .searchbar {
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid white;
+        width: calc(10rem + 6vmin);
+        @include flex(row, center, flex-start);
+
+        label {
+          height: calc(1rem + 0.6vmin);
+          width: calc(1rem + 0.6vmin);
+          display: inline-block;
+          svg {
+            fill: white;
+          }
+        }
+        input {
+          background: transparent;
+          border: none;
+          height: 3rem;
+          color: white;
+          font-size: $chanel-placeholder-text-font-size;
+          width: 70%;
+          padding-left: 1rem;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: white;
+            font-family: $font-proxima;
+            font-size: $chanel-placeholder-text-font-size;
+          }
+        }
+      }
+
+      .icons {
+        height: calc(1rem + 0.5vmin);
+        width: calc(3rem + 3vmin);
+        @include flex(row, center, space-between);
+        .share-icon {
+          height: 100%;
+          width: calc(1rem + 1vmin);
+        }
+        .line {
+          width: 0.1rem;
+          height: 100%;
+          background: white;
+        }
+        .info-icon {
+          height: 100%;
+          width: calc(1rem + 1vmin);
+        }
+      }
+      .categories {
+        width: calc(8rem + 6vmin);
+        height: 3rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid white;
+        transition: opacity 0.2s;
+        &:hover {
+          opacity: 0.8;
+        }
+
+        button {
+          height: 100%;
+          width: 80%;
+          margin: auto;
+          background: transparent;
+          border: none;
+          white-space: nowrap;
+          color: white;
+          font-size: $chanel-placeholder-text-font-size;
+          font-family: $font-proxima;
+          @include flex(row, center, space-between);
+
+          &:focus {
+            outline: none;
+          }
+
+          .dropdown-icon {
+            height: 100%;
+            width: calc(1rem + 0.5vmin);
+            @include flex(row, center, center);
+          }
+        }
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        fill: white;
+        transition: opacity 0.2s;
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+  .video-previews {
+    min-height: 30vh;
+    @include flex(row, center, none);
+    flex-wrap: wrap;
+
+    .video {
+      min-height: 15rem;
+      height: 30vh;
+      flex: 1 1 20rem;
+      font-size: $preview-p-title-font-size;
+      color: white;
+      position: relative;
+      @include flex(column, center, center);
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: black;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.4s, opacity 0.4s linear;
+      }
+
+      &:hover::before {
+        visibility: visible;
+        opacity: 0.6;
+      }
+
+      &:hover .video-content {
+        animation: textAnimationIn 0.8s;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .video-content {
+        @include flex(column, center, center);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.4s, opacity 0.4s linear;
+        animation: textAnimationOut 0.8s;
+
+        p {
+          position: relative;
+        }
+
+        button {
+          border: none;
+          background: transparent;
+          color: white;
+          margin-top: 2rem;
+          @include flex(row, center, center);
+          transition: opacity 0.2s;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          .play-button {
+            border: 0.2rem solid white;
+            border-radius: 50%;
+            padding: 1.4rem;
+            position: relative;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 55%;
+              top: 50%;
+              transform: translate(-55%, -50%);
+              border-style: solid;
+              border-width: 0.6rem 0 0.6rem 1.1rem;
+              border-color: transparent transparent transparent
+                rgba(255, 255, 255, 1);
+            }
+          }
+          .button-text {
+            font-family: $font-proxima;
+            font-size: $preview-p-text-font-size;
+            border-bottom: 0.15rem solid white;
+            margin-left: 1rem;
+            position: relative;
+          }
+        }
+      }
+    }
+    .video1 {
+      background: url("../images-video/taxi.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    .video2 {
+      background: url("../images-video/canoe.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    .video3 {
+      background: url("../images-video/lifeguard.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+@keyframes textAnimationIn {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes textAnimationOut {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(30%);
+  }
+}

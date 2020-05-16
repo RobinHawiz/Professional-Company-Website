@@ -1,0 +1,97 @@
+#blog {
+  min-height: 50vh;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+
+  .blog-post1 {
+    background: url("../images-blog/tape.webp");
+  }
+  .blog-post2 {
+    background: url("../images-blog/purplefruit.webp");
+  }
+
+  .blog-post {
+    height: calc(20rem + 18vmin);
+    width: calc(20rem + 18vmin);
+    margin: 1.8rem;
+    background-size: cover;
+    background-position: center;
+    @include flex(column, none, space-between);
+    position: relative;
+    font-family: $font-proxima;
+    color: white;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: rgba(18, 19, 156, 0.3);
+    }
+
+    .top-info {
+      position: relative;
+      padding: 2rem 0rem 0rem 2rem;
+
+      .author {
+        @include flex(row, center, none);
+        p {
+          padding-right: 0.2rem;
+        }
+        svg {
+          fill: white;
+        }
+      }
+
+      ul {
+        @include flex(row, center, none);
+
+        li.dot {
+          margin-left: 2.1rem;
+          list-style: disc;
+        }
+      }
+    }
+
+    .bottom-info {
+      position: relative;
+      padding: 0rem 2rem 2rem 2rem;
+
+      .mini-footer {
+        @include flex(row, center, space-between);
+        padding-top: 1rem;
+
+        .text {
+          @include flex(row, center, center);
+
+          p {
+            padding-right: 1.5rem;
+          }
+        }
+
+        svg {
+          fill: transparent;
+          stroke: #e84a43;
+          stroke-width: 0.15rem;
+        }
+      }
+
+      p.title {
+        font-size: $blog-p-title-font-size;
+        padding-left: 0.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 0.1rem solid white;
+      }
+    }
+
+    p,
+    a,
+    li {
+      font-size: $blog-p-text-font-size;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}

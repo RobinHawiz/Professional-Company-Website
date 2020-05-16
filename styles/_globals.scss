@@ -4,10 +4,34 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  font-size: $header1;
+  color: $theme-color1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: $header2;
+  color: $theme-color1;
+  font-weight: 700;
+}
+
+li {
+  list-style: none;
+}
+
 a {
-  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }

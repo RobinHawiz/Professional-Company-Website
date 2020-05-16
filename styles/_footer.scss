@@ -1,0 +1,19 @@
+footer {
+  min-height: 25vh;
+  @include flex(column, center, flex-end);
+
+  ul {
+    @include flex(row, center, center);
+
+    li.twitter {
+      margin: 0rem 1rem;
+    }
+  }
+  p {
+    color: $theme-color1;
+    font-family: $font-proxima;
+    font-size: $footer-p-text-font-size;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+}
