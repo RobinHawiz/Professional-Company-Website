@@ -128,6 +128,10 @@
           button.filter2 {
             padding-left: 2rem;
           }
+
+          p span.label {
+            color: rgba(18, 19, 156, 0.6);
+          }
         }
 
         button {
@@ -141,10 +145,6 @@
 
           p {
             font-size: $forum-p-text-filter-button-font-size;
-          }
-
-          p span.label {
-            color: rgba(18, 19, 156, 0.6);
           }
         }
       }
