@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
 @font-face {
   font-family: "ProximaNW01-Reg";
@@ -2218,6 +2219,100 @@ footer p {
   color: #12139c;
   font-family: "ProximaNW01-Reg", Fallback, sans-serif;
   font-size: calc(1rem + 0.15vmin);
+}
+
+#forum .forum-wrapper .forum-content .posts {
+  border-top: 0.1rem solid rgba(18, 19, 156, 0.25);
+  color: #12139c;
+  fill: #12139c;
+}
+
+#forum .forum-wrapper .forum-content .posts .post {
+  padding: 1.2rem 2.4rem;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .post-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .post-description p.title {
+  font-size: calc(1rem + 0.5vmin);
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .post-description p.title:hover {
+  color: #f4d2d3;
+  cursor: pointer;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .post-description svg {
+  margin-left: 0.8rem;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .author-and-post-type ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .author-and-post-type ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(0.8rem + 0.3vmin);
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .author-and-post-type ul li.author:hover {
+  color: #f4d2d3;
+  cursor: pointer;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .author-and-post-type ul li.dot {
+  margin-left: 2rem;
+  position: relative;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .author-and-post-type ul li.dot:before {
+  content: "•";
+  left: -1.2rem;
+  font-size: 1rem;
+  position: absolute;
+}
+
+#forum .forum-wrapper .forum-content .posts .post .post-description-and-author .author-and-post-type ul svg {
+  opacity: 0.5;
 }
 
 /* MEDIA Queries */
