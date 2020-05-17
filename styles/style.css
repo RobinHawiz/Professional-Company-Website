@@ -2409,6 +2409,10 @@ footer p {
   padding-left: 1rem;
 }
 
+#forum .forum-wrapper .forum-content .posts .post-bottom {
+  border: none;
+}
+
 /* MEDIA Queries */
 @media screen and (max-width: 688px) {
   /* NAVBAR */
