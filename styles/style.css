@@ -2353,9 +2353,6 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-flex: 0.45;
-      -ms-flex: 0.45 1 20rem;
-          flex: 0.45 1 20rem;
   padding: 0.2rem 0rem;
 }
 

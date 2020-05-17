@@ -267,7 +267,6 @@
 
           .activity-stats {
             @include flex(row, center, space-between);
-            flex: 0.45 1 20rem;
 
             padding: 0.2rem 0rem;
 
