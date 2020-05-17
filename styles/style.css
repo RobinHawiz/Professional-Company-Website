@@ -2413,6 +2413,41 @@ footer p {
   border: none;
 }
 
+#medlemmar {
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#medlemmar .medlemmar-wrapper {
+  margin: 0rem 2rem;
+  width: calc(40rem + 40vmin);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
 #medlemmar .medlemmar-wrapper .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2540,8 +2575,9 @@ footer p {
   border: none;
   padding-left: 1rem;
   font-size: calc(1rem + 0.5vmin);
+  font-family: "poppins", sans-serif;
   font-weight: 200;
-  width: calc(5rem + 12vmin);
+  width: calc(5rem + 20vmin);
   color: #12139c;
 }
 
@@ -2552,25 +2588,33 @@ footer p {
 #medlemmar .medlemmar-wrapper .header .searchbar-and-icons .searchbar input::-webkit-input-placeholder {
   color: #12139c;
   font-size: calc(1rem + 0.5vmin);
+  font-family: "poppins", sans-serif;
   font-weight: 200;
+  opacity: 0.25;
 }
 
 #medlemmar .medlemmar-wrapper .header .searchbar-and-icons .searchbar input:-ms-input-placeholder {
   color: #12139c;
   font-size: calc(1rem + 0.5vmin);
+  font-family: "poppins", sans-serif;
   font-weight: 200;
+  opacity: 0.25;
 }
 
 #medlemmar .medlemmar-wrapper .header .searchbar-and-icons .searchbar input::-ms-input-placeholder {
   color: #12139c;
   font-size: calc(1rem + 0.5vmin);
+  font-family: "poppins", sans-serif;
   font-weight: 200;
+  opacity: 0.25;
 }
 
 #medlemmar .medlemmar-wrapper .header .searchbar-and-icons .searchbar input::placeholder {
   color: #12139c;
   font-size: calc(1rem + 0.5vmin);
+  font-family: "poppins", sans-serif;
   font-weight: 200;
+  opacity: 0.25;
 }
 
 #medlemmar .medlemmar-wrapper .header .searchbar-and-icons svg {
@@ -2582,6 +2626,10 @@ footer p {
 
 #medlemmar .medlemmar-wrapper .header .searchbar-and-icons svg:hover {
   fill: #f4d2d3;
+}
+
+#medlemmar .medlemmar-wrapper .header .searchbar-and-icons svg.hamburger {
+  margin-right: 2rem;
 }
 
 /* MEDIA Queries */

@@ -1,5 +1,10 @@
 #medlemmar {
+  min-height: 40vh;
+  @include flex(row, none, center);
   .medlemmar-wrapper {
+    margin: 0rem 2rem;
+    width: calc(40rem + 40vmin);
+    @include flex(column, none, none);
     .header {
       @include flex(row, center, space-between);
       .filter-buttons {
@@ -62,8 +67,9 @@
             border: none;
             padding-left: 1rem;
             font-size: $forum-input-text-font-size;
+            font-family: "poppins", sans-serif;
             font-weight: 200;
-            width: calc(5rem + 12vmin);
+            width: calc(5rem + 20vmin);
             color: $theme-color1;
 
             &:focus {
@@ -73,7 +79,9 @@
             &::placeholder {
               color: $theme-color1;
               font-size: $forum-input-text-font-size;
+              font-family: "poppins", sans-serif;
               font-weight: 200;
+              opacity: 0.25;
             }
           }
         }
@@ -86,6 +94,10 @@
           &:hover {
             fill: $theme-color2;
           }
+        }
+
+        svg.hamburger {
+          margin-right: 2rem;
         }
       }
     }
