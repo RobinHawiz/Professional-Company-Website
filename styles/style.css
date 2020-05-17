@@ -2074,10 +2074,10 @@ footer p {
 #forum .forum-wrapper .forum-content {
   margin-top: 2rem;
   width: 100%;
+  border: 0.1rem solid rgba(18, 19, 156, 0.25);
 }
 
 #forum .forum-wrapper .forum-content .header2 {
-  border: 0.1rem solid rgba(18, 19, 156, 0.25);
   padding: 1.5rem 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2182,6 +2182,42 @@ footer p {
 
 #forum .forum-wrapper .forum-content .header2 button.new-post svg {
   margin-left: 0.8rem;
+}
+
+#forum .forum-wrapper .forum-content .activity-bar {
+  border-top: 0.1rem solid rgba(18, 19, 156, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1.2rem 2.4rem;
+}
+
+#forum .forum-wrapper .forum-content .activity-bar svg {
+  margin-right: calc(1rem + 3vmin);
+  stroke: #12139c;
+  fill: none;
+}
+
+#forum .forum-wrapper .forum-content .activity-bar svg.views {
+  stroke: none;
+  fill: #12139c;
+}
+
+#forum .forum-wrapper .forum-content .activity-bar p {
+  margin-right: calc(1.5rem + 4vmin);
+  color: #12139c;
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+  font-size: calc(1rem + 0.15vmin);
 }
 
 /* MEDIA Queries */
