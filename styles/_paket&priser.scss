@@ -1,0 +1,78 @@
+#paket-priser {
+  min-height: 73vh;
+  font-family: $font-proxima;
+  @include flex(column, center, center);
+
+  .paket-priser-wrapper {
+    padding: 2rem 0rem;
+    h2 {
+      padding-bottom: calc(3rem + 2vmin);
+      font-weight: normal;
+      text-align: center;
+    }
+    .packages {
+      @include flex(row, center, center);
+      flex-wrap: wrap;
+      margin-bottom: 12rem;
+      .package {
+        @include flex(column, center, center);
+        width: calc(20rem + 7.5vmin);
+        border: 0.1rem solid rgba(18, 19, 156, 0.25);
+        color: $theme-color1;
+        margin: 1rem 2rem;
+
+        .info {
+          @include flex(column, center, center);
+          width: 100%;
+          padding: 3rem;
+          p.title {
+            font-size: $paketPriser-p-title-font-size;
+            padding-bottom: 1.2rem;
+          }
+          .price {
+            @include flex(row, none, center);
+
+            p.currency {
+              font-size: $paketPriser-p-currency-font-size;
+            }
+
+            p.price-tag {
+              padding-top: 1rem;
+              font-size: $paketPriser-p-priceTag-font-size;
+            }
+          }
+          p.site-type {
+            margin-top: 1.2rem;
+            font-size: $paketPriser-p-siteType-font-size;
+          }
+
+          button {
+            width: 100%;
+            border: none;
+            background: $theme-color2;
+            color: white;
+            padding: 1.5rem 0rem;
+            margin-top: 5rem;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .features {
+          @include flex(column, center, flex-start);
+          border-top: 0.1rem solid rgba(18, 19, 156, 0.25);
+          height: 20rem;
+          width: 100%;
+          padding: 3rem;
+
+          p {
+            font-size: $paketPriser-p-features-font-size;
+            padding: 0.525rem;
+          }
+        }
+      }
+    }
+  }
+}

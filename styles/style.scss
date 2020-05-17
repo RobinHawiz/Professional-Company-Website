@@ -36,7 +36,11 @@ $footer-p-text-font-size: 1.4rem;
 $blogg-p-title-font-size: calc(1.4rem + 0.6vmin);
 $blogg-p-text-font-size: calc(0.8rem + 0.5vmin);
 $blogg-input-text-font-size: calc(1.4rem + 0.6vmin);
-
+$paketPriser-p-title-font-size: calc(1.4rem + 0.6vmin);
+$paketPriser-p-currency-font-size: calc(1rem + 0.6vmin);
+$paketPriser-p-priceTag-font-size: calc(3rem + 3vmin);
+$paketPriser-p-siteType-font-size: calc(1.15rem + 0.2vmin);
+$paketPriser-p-features-font-size: calc(1.1rem + 0.3vmin);
 /* FONT-FAMILIES*/
 
 $font-proxima: "ProximaNW01-Reg", Fallback, sans-serif;
@@ -67,6 +71,7 @@ $theme-color2: #f4d2d3;
 @import "blog";
 @import "footer";
 @import "blogg";
+@import "paket&priser";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
 
 /* MEDIA Queries */
