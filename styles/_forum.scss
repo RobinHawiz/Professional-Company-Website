@@ -1,8 +1,11 @@
 #forum {
+  @include flex(row, none, center);
   .forum-wrapper {
     @include flex(column, center, center);
+
     .header {
       margin-top: 4rem;
+      margin-bottom: 2rem;
       width: calc(4rem + 70vmin);
       @include flex(row, center, space-between);
 
@@ -60,6 +63,42 @@
         svg.dots {
           margin-left: 1.2rem;
         }
+      }
+    }
+    .forum-introduction {
+      background: url("../forum/images/design.webp");
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+      width: 100%;
+      height: 22vh;
+      @include flex(column, center, center);
+      text-align: center;
+      position: relative;
+
+      p {
+        color: white;
+        position: relative;
+      }
+
+      p.title {
+        font-size: $forum-p-title-introduction-font-size;
+        font-weight: 600;
+        padding-bottom: 1rem;
+      }
+
+      p.text {
+        font-size: $forum-p-text-introduction-font-size;
+        font-family: $font-proxima;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.25;
+        position: absolute;
       }
     }
   }

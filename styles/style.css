@@ -1866,6 +1866,22 @@ footer p {
   padding: 0.525rem;
 }
 
+#forum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #forum .forum-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1884,6 +1900,7 @@ footer p {
 
 #forum .forum-wrapper .header {
   margin-top: 4rem;
+  margin-bottom: 2rem;
   width: calc(4rem + 70vmin);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1999,6 +2016,55 @@ footer p {
 
 #forum .forum-wrapper .header .searchbar-and-icons svg.dots {
   margin-left: 1.2rem;
+}
+
+#forum .forum-wrapper .forum-introduction {
+  background: url("../forum/images/design.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  width: 100%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#forum .forum-wrapper .forum-introduction p {
+  color: white;
+  position: relative;
+}
+
+#forum .forum-wrapper .forum-introduction p.title {
+  font-size: calc(2rem + 2.3vmin);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+#forum .forum-wrapper .forum-introduction p.text {
+  font-size: calc(1rem + 0.75vmin);
+  font-family: "ProximaNW01-Reg", Fallback, sans-serif;
+}
+
+#forum .forum-wrapper .forum-introduction::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.25;
+  position: absolute;
 }
 
 /* MEDIA Queries */
