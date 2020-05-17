@@ -101,5 +101,42 @@
         position: absolute;
       }
     }
+    .forum-content {
+      .header {
+        border: 0.1rem solid rgba(18, 19, 156, 0.25);
+        padding: 2.4rem;
+        button {
+          border: none;
+          font-family: $font-proxima;
+          @include flex(row, center, center);
+
+          &:focus {
+            outline: none;
+          }
+
+          p {
+            font-size: $forum-p-text-filter-button-font-size;
+          }
+
+          p span.label {
+            color: rgba(18, 19, 156, 0.6);
+          }
+        }
+        button.filter {
+          background: transparent;
+
+          &:hover p span.filter-after,
+          &:hover svg {
+            color: $theme-color2;
+            fill: $theme-color2;
+          }
+
+          svg {
+            margin-left: 0.8rem;
+            fill: $theme-color1;
+          }
+        }
+      }
+    }
   }
 }
