@@ -8,15 +8,18 @@
     h2 {
       padding-bottom: calc(3rem + 2vmin);
       font-weight: normal;
+      text-align: center;
     }
     .packages {
       @include flex(row, center, center);
+      flex-wrap: wrap;
       margin-bottom: 12rem;
       .package {
         @include flex(column, center, center);
         width: calc(20rem + 7.5vmin);
         border: 0.1rem solid rgba(18, 19, 156, 0.25);
         color: $theme-color1;
+        margin: 1rem 2rem;
 
         .info {
           @include flex(column, center, center);
@@ -34,6 +37,7 @@
             }
 
             p.price-tag {
+              padding-top: 1rem;
               font-size: $paketPriser-p-priceTag-font-size;
             }
           }

@@ -1733,6 +1733,7 @@ footer p {
 #paket-priser .paket-priser-wrapper h2 {
   padding-bottom: calc(3rem + 2vmin);
   font-weight: normal;
+  text-align: center;
 }
 
 #paket-priser .paket-priser-wrapper .packages {
@@ -1749,6 +1750,8 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 12rem;
 }
 
@@ -1769,6 +1772,7 @@ footer p {
   width: calc(20rem + 7.5vmin);
   border: 0.1rem solid rgba(18, 19, 156, 0.25);
   color: #12139c;
+  margin: 1rem 2rem;
 }
 
 #paket-priser .paket-priser-wrapper .packages .package .info {
@@ -1815,6 +1819,7 @@ footer p {
 }
 
 #paket-priser .paket-priser-wrapper .packages .package .info .price p.price-tag {
+  padding-top: 1rem;
   font-size: calc(3rem + 3vmin);
 }
 
