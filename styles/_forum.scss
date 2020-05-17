@@ -105,6 +105,31 @@
       .header {
         border: 0.1rem solid rgba(18, 19, 156, 0.25);
         padding: 2.4rem;
+
+        .filter-buttons {
+          @include flex(row, center, center);
+          flex-wrap: wrap;
+
+          button {
+            background: transparent;
+
+            &:hover p span.filter-after,
+            &:hover svg {
+              color: $theme-color2;
+              fill: $theme-color2;
+            }
+
+            svg {
+              margin-left: 0.8rem;
+              fill: $theme-color1;
+            }
+          }
+
+          button.filter2 {
+            padding-left: 2rem;
+          }
+        }
+
         button {
           border: none;
           font-family: $font-proxima;
@@ -120,20 +145,6 @@
 
           p span.label {
             color: rgba(18, 19, 156, 0.6);
-          }
-        }
-        button.filter {
-          background: transparent;
-
-          &:hover p span.filter-after,
-          &:hover svg {
-            color: $theme-color2;
-            fill: $theme-color2;
-          }
-
-          svg {
-            margin-left: 0.8rem;
-            fill: $theme-color1;
           }
         }
       }
