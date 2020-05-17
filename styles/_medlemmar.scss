@@ -1,0 +1,93 @@
+#medlemmar {
+  .medlemmar-wrapper {
+    .header {
+      @include flex(row, center, space-between);
+      .filter-buttons {
+        @include flex(row, center, none);
+        flex-wrap: wrap;
+        margin-right: auto;
+
+        button {
+          background: transparent;
+          border: none;
+
+          @include flex(row, center, center);
+
+          &:hover p span.filter-after,
+          &:hover svg {
+            color: $theme-color2;
+            fill: $theme-color2;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          svg {
+            margin-left: 0.8rem;
+            fill: $theme-color1;
+          }
+        }
+
+        button.filter2 {
+          padding: 1rem 0rem;
+          padding-left: 2rem;
+        }
+
+        p span {
+          font-size: $forum-p-text-filter-button-font-size;
+          font-family: "poppins", sans-serif;
+          color: $theme-color1;
+          font-weight: 200;
+        }
+
+        p span.label {
+          color: rgba(18, 19, 156, 0.6);
+        }
+      }
+
+      .searchbar-and-icons {
+        @include flex(row, center, none);
+        .searchbar {
+          @include flex(row, center, none);
+          border-bottom: 0.1rem solid rgba(18, 19, 156, 0.25);
+
+          label {
+            height: calc(1rem + 0.6vmin);
+            width: calc(1rem + 0.6vmin);
+            display: inline-block;
+          }
+
+          input {
+            border: none;
+            padding-left: 1rem;
+            font-size: $forum-input-text-font-size;
+            font-weight: 200;
+            width: calc(5rem + 12vmin);
+            color: $theme-color1;
+
+            &:focus {
+              outline: none;
+            }
+
+            &::placeholder {
+              color: $theme-color1;
+              font-size: $forum-input-text-font-size;
+              font-weight: 200;
+            }
+          }
+        }
+        svg {
+          height: calc(1rem + 0.6vmin);
+          width: calc(1rem + 0.6vmin);
+          fill: $theme-color1;
+          cursor: pointer;
+
+          &:hover {
+            fill: $theme-color2;
+          }
+        }
+      }
+    }
+  }
+}
