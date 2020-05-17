@@ -41,6 +41,8 @@ $paketPriser-p-currency-font-size: calc(1rem + 0.6vmin);
 $paketPriser-p-priceTag-font-size: calc(3rem + 3vmin);
 $paketPriser-p-siteType-font-size: calc(1.15rem + 0.2vmin);
 $paketPriser-p-features-font-size: calc(1.1rem + 0.3vmin);
+$forum-p-title-font-size: calc(1rem + 0.5vmin);
+$forum-input-text-font-size: calc(1rem + 0.5vmin);
 /* FONT-FAMILIES*/
 
 $font-proxima: "ProximaNW01-Reg", Fallback, sans-serif;
@@ -72,6 +74,7 @@ $theme-color2: #f4d2d3;
 @import "footer";
 @import "blogg";
 @import "paket&priser";
+@import "forum";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
 
 /* MEDIA Queries */
