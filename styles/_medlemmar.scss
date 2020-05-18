@@ -1,0 +1,192 @@
+#medlemmar {
+  min-height: 40vh;
+  @include flex(row, none, center);
+  .medlemmar-wrapper {
+    margin: 0rem 2rem;
+    width: calc(50rem + 40vmin);
+    @include flex(column, none, none);
+    .header {
+      @include flex(row, center, space-between);
+      flex-wrap: wrap;
+      .filter-buttons {
+        @include flex(row, center, none);
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        margin-right: auto;
+
+        button {
+          background: transparent;
+          border: none;
+
+          @include flex(row, center, center);
+
+          &:hover p span.filter-after,
+          &:hover svg {
+            color: $theme-color2;
+            fill: $theme-color2;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          svg {
+            margin-left: 0.8rem;
+            fill: $theme-color1;
+          }
+        }
+
+        button.filter2 {
+          padding: 1rem 0rem;
+          padding-left: 2rem;
+        }
+
+        p span {
+          font-size: $forum-p-text-filter-button-font-size;
+          font-family: "poppins", sans-serif;
+          color: $theme-color1;
+          font-weight: 200;
+        }
+
+        p span.label {
+          color: rgba(18, 19, 156, 0.6);
+        }
+      }
+
+      .searchbar-and-icons {
+        @include flex(row, center, none);
+        .searchbar {
+          @include flex(row, center, none);
+          border-bottom: 0.1rem solid rgba(18, 19, 156, 0.25);
+
+          label {
+            height: calc(1rem + 0.6vmin);
+            width: calc(1rem + 0.6vmin);
+            display: inline-block;
+          }
+
+          input {
+            border: none;
+            padding-left: 1rem;
+            font-size: $forum-input-text-font-size;
+            font-family: "poppins", sans-serif;
+            font-weight: 200;
+            width: calc(5rem + 20vmin);
+            color: $theme-color1;
+
+            &:focus {
+              outline: none;
+            }
+
+            &::placeholder {
+              color: $theme-color1;
+              font-size: $forum-input-text-font-size;
+              font-family: "poppins", sans-serif;
+              font-weight: 200;
+              opacity: 0.25;
+            }
+          }
+        }
+        svg {
+          height: calc(1rem + 0.6vmin);
+          width: calc(1rem + 0.6vmin);
+          fill: $theme-color1;
+          cursor: pointer;
+
+          &:hover {
+            fill: $theme-color2;
+          }
+        }
+
+        svg.hamburger {
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    .users {
+      height: 100%;
+      @include flex(row, center, space-between);
+      flex-wrap: wrap;
+      .user-card {
+        width: calc(20rem + 7.5vmin);
+        border: 0.1rem solid rgba(18, 19, 156, 0.25);
+        color: $theme-color1;
+        margin-top: calc(1rem + 2vmin);
+        @include flex(column, none, none);
+
+        text-align: center;
+        position: relative;
+
+        svg.dots {
+          right: 5%;
+          top: 5%;
+          position: absolute;
+          fill: $theme-color1;
+          cursor: pointer;
+        }
+
+        .user-profile {
+          padding: 3rem;
+          width: 100%;
+          font-weight: 200;
+          @include flex(column, center, center);
+          .profile-image {
+            width: calc(10rem + 3vmin);
+            height: calc(10rem + 3vmin);
+            align-self: center;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+          p.name {
+            font-size: $medlemmar-p-name-font-size;
+            margin-top: 1rem;
+          }
+
+          .title {
+            @include flex(row, center, center);
+            margin-top: 1rem;
+
+            svg {
+              fill: $theme-color1;
+            }
+
+            p.title {
+              font-size: $medlemmar-p-title-font-size;
+              margin: 0.2rem 0rem 0.2rem 0.6rem;
+            }
+          }
+
+          .follower-count {
+            @include flex(row, center, center);
+            font-size: $medlemmar-p-follower-count-font-size;
+            margin-top: 1.6rem;
+
+            .followers {
+              margin: 2rem;
+              padding-right: 2rem;
+              border-right: 0.1rem solid rgba(18, 19, 156, 0.25);
+            }
+            .following {
+              margin: 2rem 2rem 2rem 0rem;
+            }
+          }
+
+          button {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.8rem 1.8rem;
+            border: 0.1rem solid $theme-color2;
+            color: $theme-color2;
+            font-family: "poppins", sans-serif;
+            font-weight: 200;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@
       format("svg");
 }
 
-/* FONT-SIZES */
+/* FONT-SIZES (P.S This is getting redicilously big and stupid, note to future self: Add standard sized...)*/
 
 $header1: 7.2rem;
 $header2: calc(2rem + 1.5vmin);
@@ -49,6 +49,9 @@ $forum-p-text-filter-button-font-size: calc(1rem + 0.4vmin);
 $forum-p-text-activity-font-size: calc(1rem + 0.15vmin);
 $forum-p-title-post-font-size: calc(1rem + 0.5vmin);
 $forum-p-author-post-font-size: calc(0.8rem + 0.3vmin);
+$medlemmar-p-name-font-size: calc(1.2rem + 0.3vmin);
+$medlemmar-p-title-font-size: calc(0.8rem + 0.3vmin);
+$medlemmar-p-follower-count-font-size: calc(0.9rem + 0.4vmin);
 
 /* FONT-FAMILIES*/
 
@@ -82,9 +85,20 @@ $theme-color2: #f4d2d3;
 @import "blogg";
 @import "paket&priser";
 @import "forum";
+@import "medlemmar";
 @import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
 
 /* MEDIA Queries */
+
+@media screen and (max-width: 825px) {
+  #medlemmar {
+    .medlemmar-wrapper {
+      .users {
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 688px) {
   /* NAVBAR */
@@ -117,9 +131,25 @@ $theme-color2: #f4d2d3;
   }
 }
 
+@media screen and (max-width: 601px) {
+  .filter-buttons {
+    margin: auto;
+  }
+
+  .searchbar-and-icons {
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 496px) {
   .activity-bar {
     justify-content: flex-start !important;
     padding-left: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  .filter-buttons {
+    @include flex(row, center, center);
   }
 }
