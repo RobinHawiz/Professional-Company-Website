@@ -3,12 +3,14 @@
   @include flex(row, none, center);
   .medlemmar-wrapper {
     margin: 0rem 2rem;
-    width: calc(40rem + 40vmin);
+    width: calc(50rem + 40vmin);
     @include flex(column, none, none);
     .header {
       @include flex(row, center, space-between);
+      flex-wrap: wrap;
       .filter-buttons {
         @include flex(row, center, none);
+        margin-top: 2rem;
         flex-wrap: wrap;
         margin-right: auto;
 
@@ -104,12 +106,15 @@
 
     .users {
       height: 100%;
+      @include flex(row, center, space-between);
+      flex-wrap: wrap;
       .user-card {
         width: calc(20rem + 7.5vmin);
         border: 0.1rem solid rgba(18, 19, 156, 0.25);
         color: $theme-color1;
-        margin: 1rem 2rem;
+        margin-top: calc(1rem + 2vmin);
         @include flex(column, none, none);
+
         text-align: center;
         position: relative;
 
@@ -127,8 +132,8 @@
           font-weight: 200;
           @include flex(column, center, center);
           .profile-image {
-            width: 10rem;
-            height: 10rem;
+            width: calc(10rem + 3vmin);
+            height: calc(10rem + 3vmin);
             align-self: center;
             img {
               width: 100%;
@@ -138,22 +143,35 @@
           }
           p.name {
             font-size: $medlemmar-p-name-font-size;
+            margin-top: 1rem;
           }
 
           .title {
             @include flex(row, center, center);
+            margin-top: 1rem;
+
+            svg {
+              fill: $theme-color1;
+            }
+
+            p.title {
+              font-size: $medlemmar-p-title-font-size;
+              margin: 0.2rem 0rem 0.2rem 0.6rem;
+            }
           }
 
           .follower-count {
             @include flex(row, center, center);
+            font-size: $medlemmar-p-follower-count-font-size;
+            margin-top: 1.6rem;
 
             .followers {
-              margin: 1rem;
-              padding-right: 1rem;
+              margin: 2rem;
+              padding-right: 2rem;
               border-right: 0.1rem solid rgba(18, 19, 156, 0.25);
             }
             .following {
-              margin: 1rem 1rem 1rem 0rem;
+              margin: 2rem 2rem 2rem 0rem;
             }
           }
 
