@@ -24,6 +24,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
 }
 
 h1 {
@@ -2785,6 +2787,24 @@ footer p {
   font-family: "poppins", sans-serif;
   font-weight: 200;
   background: none;
+}
+
+/* Animations */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* MEDIA Queries */
