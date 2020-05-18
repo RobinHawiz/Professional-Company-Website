@@ -2836,7 +2836,7 @@ footer p {
   width: calc(50rem + 40vmin);
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav {
+#profile .profile-wrapper .user-card-and-vertical-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2854,7 +2854,7 @@ footer p {
       flex-wrap: wrap;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card {
   width: calc(20rem + 7.5vmin);
   border: 0.1rem solid rgba(18, 19, 156, 0.25);
   color: #12139c;
@@ -2876,7 +2876,7 @@ footer p {
   position: relative;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card svg.dots {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card svg.dots {
   right: 5%;
   top: 5%;
   position: absolute;
@@ -2884,7 +2884,7 @@ footer p {
   cursor: pointer;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile {
   padding: 3rem;
   width: 100%;
   font-weight: 200;
@@ -2903,7 +2903,7 @@ footer p {
           justify-content: center;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .profile-image {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .profile-image {
   width: calc(10rem + 3vmin);
   height: calc(10rem + 3vmin);
   -ms-flex-item-align: center;
@@ -2911,22 +2911,22 @@ footer p {
       align-self: center;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .profile-image img {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .profile-image img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile a {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile a {
   color: #12139c;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile p.name {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile p.name {
   font-size: calc(1.2rem + 0.3vmin);
   margin-top: 1rem;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .title {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2943,16 +2943,16 @@ footer p {
   margin-top: 1rem;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .title svg {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .title svg {
   fill: #12139c;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .title p.title {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .title p.title {
   font-size: calc(0.8rem + 0.3vmin);
   margin: 0.2rem 0rem 0.2rem 0.6rem;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .follower-count {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .follower-count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2970,22 +2970,22 @@ footer p {
   margin-top: 1.6rem;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .follower-count .followers {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .follower-count .followers {
   margin: 2rem;
   padding-right: 2rem;
   border-right: 0.1rem solid rgba(18, 19, 156, 0.25);
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile .follower-count .following {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile .follower-count .following {
   margin: 2rem 2rem 2rem 0rem;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile a.button {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile a.button {
   margin-top: 1rem;
   width: 100%;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .user-card .user-profile button {
+#profile .profile-wrapper .user-card-and-vertical-nav .user-card .user-profile button {
   width: 100%;
   padding: 0.8rem 1.8rem;
   border: 0.1rem solid #f4d2d3;
@@ -2995,29 +2995,29 @@ footer p {
   background: none;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .profile-nav {
+#profile .profile-wrapper .user-card-and-vertical-nav .profile-nav {
   margin-top: 3rem;
   border: 0.1rem solid rgba(18, 19, 156, 0.25);
   color: #12139c;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .profile-nav li {
+#profile .profile-wrapper .user-card-and-vertical-nav .profile-nav li {
   font-weight: 200;
   font-size: calc(1rem + 0.6vmin);
   padding: 1rem 3rem;
   cursor: pointer;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .profile-nav li:hover,
-#profile .profile-wrapper .user-card-and-horizontal-nav .profile-nav li:hover span.active {
+#profile .profile-wrapper .user-card-and-vertical-nav .profile-nav li:hover,
+#profile .profile-wrapper .user-card-and-vertical-nav .profile-nav li:hover span.active {
   color: #1919ff;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .profile-nav li span.active {
+#profile .profile-wrapper .user-card-and-vertical-nav .profile-nav li span.active {
   color: #f4d2d3;
 }
 
-#profile .profile-wrapper .user-card-and-horizontal-nav .profile-nav li span.posts {
+#profile .profile-wrapper .user-card-and-vertical-nav .profile-nav li span.posts {
   opacity: 0.6;
 }
 

@@ -8,7 +8,7 @@
   .profile-wrapper {
     @include flex(row, center, center);
     width: calc(50rem + 40vmin);
-    .user-card-and-horizontal-nav {
+    .user-card-and-vertical-nav {
       @include flex(column, none, none);
       flex-wrap: wrap;
       .user-card {
