@@ -1,0 +1,226 @@
+#no-fadein {
+  animation: none;
+}
+
+#profile {
+  @include flex(column, center, none);
+  .profile-wrapper {
+    @include flex(row, none, center);
+    flex-wrap: wrap;
+
+    .user-card-and-vertical-nav {
+      @include flex(column, none, none);
+      flex-wrap: wrap;
+      .user-card {
+        width: calc(20rem + 7.5vmin);
+        border: 0.1rem solid rgba(18, 19, 156, 0.25);
+        color: $theme-color1;
+        @include flex(column, none, none);
+
+        text-align: center;
+        position: relative;
+
+        svg.dots {
+          right: 5%;
+          top: 5%;
+          position: absolute;
+          fill: $theme-color1;
+          cursor: pointer;
+        }
+
+        .user-profile {
+          padding: 3rem;
+          width: 100%;
+          font-weight: 200;
+          @include flex(column, center, center);
+          .profile-image {
+            width: calc(10rem + 3vmin);
+            height: calc(10rem + 3vmin);
+            align-self: center;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+
+          a {
+            color: $theme-color1;
+          }
+
+          p.name {
+            font-size: $medlemmar-p-name-font-size;
+            margin-top: 1rem;
+          }
+
+          .title {
+            @include flex(row, center, center);
+            margin-top: 1rem;
+
+            svg {
+              fill: $theme-color1;
+            }
+
+            p.title {
+              font-size: $medlemmar-p-title-font-size;
+              margin: 0.2rem 0rem 0.2rem 0.6rem;
+            }
+          }
+
+          .follower-count {
+            @include flex(row, center, center);
+            font-size: $medlemmar-p-follower-count-font-size;
+            margin-top: 1.6rem;
+
+            .followers {
+              margin: 2rem;
+              padding-right: 2rem;
+              border-right: 0.1rem solid rgba(18, 19, 156, 0.25);
+            }
+            .following {
+              margin: 2rem 2rem 2rem 0rem;
+            }
+          }
+
+          a.button {
+            margin-top: 1rem;
+            width: 100%;
+          }
+
+          button {
+            width: 100%;
+            padding: 0.8rem 1.8rem;
+            border: 0.1rem solid $theme-color2;
+            color: $theme-color2;
+            font-family: "poppins", sans-serif;
+            font-weight: 200;
+            background: none;
+          }
+        }
+      }
+      .profile-nav {
+        margin-top: 3rem;
+        border: 0.1rem solid rgba(18, 19, 156, 0.25);
+        color: $theme-color1;
+        li {
+          font-weight: 200;
+          font-size: calc(1rem + 0.6vmin);
+          padding: 1rem 3rem;
+          cursor: pointer;
+
+          &:hover,
+          &:hover span.active {
+            color: #1919ff;
+          }
+
+          span.active {
+            color: $theme-color2;
+          }
+
+          span.posts {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    .about {
+      @include flex(column, none, none);
+      width: calc(20rem + 35vmin);
+      padding: 2.4rem 0rem 1.4rem 4.5rem;
+      color: $theme-color1;
+      font-weight: 200;
+
+      p.title {
+        font-size: calc(1.5rem + 1vmin);
+      }
+
+      .stats {
+        font-size: calc(0.8rem + 0.5vmin);
+        @include flex(row, center, none);
+        flex-wrap: wrap;
+
+        p {
+          margin: 0.4rem 0rem;
+        }
+
+        p.gilla,
+        p.kommentarer {
+          padding-right: 1.8rem;
+        }
+
+        p span {
+          opacity: 0.7;
+        }
+      }
+
+      form {
+        .post-creation {
+          margin: 2rem 0rem;
+          padding: 1rem 0rem;
+          border-top: 0.1rem solid rgba(18, 19, 156, 0.25);
+          border-bottom: 0.1rem solid rgba(18, 19, 156, 0.25);
+          input {
+            width: 100%;
+            background: transparent;
+            font-family: "poppins", sans-serif;
+            font-weight: 200;
+            color: $theme-color1;
+            border: none;
+            font-size: calc(1rem + 0.5vmin);
+            padding: 1.2rem 0rem;
+
+            &::placeholder {
+              color: $theme-color1;
+              font-family: "poppins", sans-serif;
+              font-weight: 200;
+              opacity: 0.5;
+              font-size: calc(1rem + 0.5vmin);
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+          button.camera,
+          button.video {
+            border: none;
+            background: none;
+            fill: $theme-color1;
+            margin: 0.8rem;
+          }
+
+          button.camera {
+            margin-left: 0rem;
+          }
+        }
+        .post-buttons {
+          @include flex(row, center, flex-end);
+          button {
+            border: none;
+            font-family: "poppins", sans-serif;
+            font-weight: 200;
+            font-size: calc(0.8rem + 0.5vmin);
+            border: 0.1rem solid $theme-color2;
+          }
+          button.kasta {
+            background: none;
+            margin-right: 2.4rem;
+            padding: 1rem 4rem;
+            color: $theme-color2;
+          }
+
+          button.publicera {
+            background: $theme-color2;
+            padding: 1rem 3rem;
+            color: white;
+          }
+        }
+        p.publicera {
+          margin-top: 1rem;
+          text-align: end;
+          font-size: calc(1rem + 0.2vmin);
+        }
+      }
+    }
+  }
+}

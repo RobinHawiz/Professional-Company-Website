@@ -141,6 +141,11 @@
               border-radius: 50%;
             }
           }
+
+          a {
+            color: $theme-color1;
+          }
+
           p.name {
             font-size: $medlemmar-p-name-font-size;
             margin-top: 1rem;
@@ -175,9 +180,13 @@
             }
           }
 
+          a.button {
+            margin-top: 1rem;
+            width: 100%;
+          }
+
           button {
             width: 100%;
-            margin-top: 1rem;
             padding: 0.8rem 1.8rem;
             border: 0.1rem solid $theme-color2;
             color: $theme-color2;
