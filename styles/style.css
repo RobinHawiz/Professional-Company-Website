@@ -2803,7 +2803,6 @@ footer p {
 }
 
 #profile {
-  min-height: 59vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2827,13 +2826,14 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: calc(50rem + 40vmin);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #profile .profile-wrapper .user-card-and-vertical-nav {
@@ -2858,7 +2858,6 @@ footer p {
   width: calc(20rem + 7.5vmin);
   border: 0.1rem solid rgba(18, 19, 156, 0.25);
   color: #12139c;
-  margin-top: calc(1rem + 2vmin);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3019,6 +3018,171 @@ footer p {
 
 #profile .profile-wrapper .user-card-and-vertical-nav .profile-nav li span.posts {
   opacity: 0.6;
+}
+
+#profile .profile-wrapper .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  width: calc(20rem + 35vmin);
+  padding: 2.4rem 0rem 1.4rem 4.5rem;
+  color: #12139c;
+  font-weight: 200;
+}
+
+#profile .profile-wrapper .about p.title {
+  font-size: calc(1.5rem + 1vmin);
+}
+
+#profile .profile-wrapper .about .stats {
+  font-size: calc(0.8rem + 0.5vmin);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#profile .profile-wrapper .about .stats p {
+  margin: 0.4rem 0rem;
+}
+
+#profile .profile-wrapper .about .stats p.gilla,
+#profile .profile-wrapper .about .stats p.kommentarer {
+  padding-right: 1.8rem;
+}
+
+#profile .profile-wrapper .about .stats p span {
+  opacity: 0.7;
+}
+
+#profile .profile-wrapper .about form .post-creation {
+  margin: 2rem 0rem;
+  padding: 1rem 0rem;
+  border-top: 0.1rem solid rgba(18, 19, 156, 0.25);
+  border-bottom: 0.1rem solid rgba(18, 19, 156, 0.25);
+}
+
+#profile .profile-wrapper .about form .post-creation input {
+  width: 100%;
+  background: transparent;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
+  color: #12139c;
+  border: none;
+  font-size: calc(1rem + 0.5vmin);
+  padding: 1.2rem 0rem;
+}
+
+#profile .profile-wrapper .about form .post-creation input::-webkit-input-placeholder {
+  color: #12139c;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
+  opacity: 0.5;
+  font-size: calc(1rem + 0.5vmin);
+}
+
+#profile .profile-wrapper .about form .post-creation input:-ms-input-placeholder {
+  color: #12139c;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
+  opacity: 0.5;
+  font-size: calc(1rem + 0.5vmin);
+}
+
+#profile .profile-wrapper .about form .post-creation input::-ms-input-placeholder {
+  color: #12139c;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
+  opacity: 0.5;
+  font-size: calc(1rem + 0.5vmin);
+}
+
+#profile .profile-wrapper .about form .post-creation input::placeholder {
+  color: #12139c;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
+  opacity: 0.5;
+  font-size: calc(1rem + 0.5vmin);
+}
+
+#profile .profile-wrapper .about form .post-creation input:focus {
+  outline: none;
+}
+
+#profile .profile-wrapper .about form .post-creation button.camera,
+#profile .profile-wrapper .about form .post-creation button.video {
+  border: none;
+  background: none;
+  fill: #12139c;
+  margin: 0.8rem;
+}
+
+#profile .profile-wrapper .about form .post-creation button.camera {
+  margin-left: 0rem;
+}
+
+#profile .profile-wrapper .about form .post-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#profile .profile-wrapper .about form .post-buttons button {
+  border: none;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
+  font-size: calc(0.8rem + 0.5vmin);
+  border: 0.1rem solid #f4d2d3;
+}
+
+#profile .profile-wrapper .about form .post-buttons button.kasta {
+  background: none;
+  margin-right: 2.4rem;
+  padding: 1rem 4rem;
+  color: #f4d2d3;
+}
+
+#profile .profile-wrapper .about form .post-buttons button.publicera {
+  background: #f4d2d3;
+  padding: 1rem 3rem;
+  color: white;
+}
+
+#profile .profile-wrapper .about form p.publicera {
+  margin-top: 1rem;
+  text-align: end;
+  font-size: calc(1rem + 0.2vmin);
 }
 
 /* Animations */
