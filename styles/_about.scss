@@ -29,17 +29,14 @@
   }
   .projects {
     background: white;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 1rem;
     min-height: 42vh;
-    @include flex(row, center, space-between);
-    flex-wrap: wrap;
 
     .project {
       height: 42vh;
-      min-height: 30rem;
-
-      flex: 1 1 22rem;
-      margin: 0 0.25vmin;
+      min-height: 40rem;
       position: relative;
 
       &:hover .hover-content {
